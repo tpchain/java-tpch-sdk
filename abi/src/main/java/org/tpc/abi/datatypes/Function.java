@@ -10,13 +10,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.datatypes;
+package org.tpc.abi.datatypes;
 
 import java.util.List;
 
-import org.web3j.abi.TypeReference;
+import org.tpc.abi.TypeReference;
 
-import static org.web3j.abi.Utils.convert;
+import static org.tpc.abi.Utils.convert;
 
 /** Function type. */
 public class Function {
