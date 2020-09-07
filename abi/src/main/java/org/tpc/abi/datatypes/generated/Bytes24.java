@@ -1,6 +1,6 @@
-package org.web3j.abi.datatypes.generated;
+package org.tpc.abi.datatypes.generated;
 
-import org.web3j.abi.datatypes.Bytes;
+import org.tpc.abi.datatypes.Bytes;
 
 /**
  * Auto generated code.
