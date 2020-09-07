@@ -10,11 +10,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.datatypes;
+package org.tpc.abi.datatypes;
 
 import java.math.BigInteger;
 
-import org.web3j.utils.Numeric;
+import org.tpc.utils.Numeric;
 
 /**
  * Address type, which by default is equivalent to uint160 which follows the Ethereum specification.
