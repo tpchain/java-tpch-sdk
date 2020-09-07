@@ -10,17 +10,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi;
+package org.tpc.abi;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 
-import org.web3j.abi.datatypes.DynamicStruct;
-import org.web3j.abi.datatypes.StaticStruct;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.abi.datatypes.generated.Uint256;
+import org.tpc.abi.datatypes.DynamicStruct;
+import org.tpc.abi.datatypes.StaticStruct;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.abi.datatypes.generated.Uint256;
 
 public class AbiV2TestFixture {
 
@@ -59,8 +59,8 @@ public class AbiV2TestFixture {
 
         public Foo(String id, String name) {
             super(
-                    new org.web3j.abi.datatypes.Utf8String(id),
-                    new org.web3j.abi.datatypes.Utf8String(name));
+                    new org.tpc.abi.datatypes.Utf8String(id),
+                    new org.tpc.abi.datatypes.Utf8String(name));
             this.id = id;
             this.name = name;
         }
@@ -72,20 +72,20 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setFooFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setFooFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETFOO,
                     Arrays.<Type>asList(new Foo("id", "name")),
                     Collections.<TypeReference<?>>emptyList());
 
-    public static final org.web3j.abi.datatypes.Function getFooFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getFooFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_GETFOO,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(new TypeReference<Foo>() {}));
 
-    public static final org.web3j.abi.datatypes.Function getFooUintFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getFooUintFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_GETFOOUINT,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(
@@ -98,8 +98,8 @@ public class AbiV2TestFixture {
 
         public Bar(BigInteger id, BigInteger data) {
             super(
-                    new org.web3j.abi.datatypes.generated.Uint256(id),
-                    new org.web3j.abi.datatypes.generated.Uint256(data));
+                    new org.tpc.abi.datatypes.generated.Uint256(id),
+                    new org.tpc.abi.datatypes.generated.Uint256(data));
             this.id = id;
             this.data = data;
         }
@@ -111,20 +111,20 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setBarFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setBarFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETBAR,
                     Arrays.<Type>asList(new Bar(BigInteger.ONE, BigInteger.TEN)),
                     Collections.<TypeReference<?>>emptyList());
 
-    public static final org.web3j.abi.datatypes.Function getBarFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getBarFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_GETBAR,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(new TypeReference<Bar>() {}));
 
-    public static final org.web3j.abi.datatypes.Function getFooBarFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getFooBarFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_GETFOOBAR,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(
@@ -137,8 +137,8 @@ public class AbiV2TestFixture {
 
         public Baz(String id, BigInteger data) {
             super(
-                    new org.web3j.abi.datatypes.Utf8String(id),
-                    new org.web3j.abi.datatypes.generated.Uint256(data));
+                    new org.tpc.abi.datatypes.Utf8String(id),
+                    new org.tpc.abi.datatypes.generated.Uint256(data));
             this.id = id;
             this.data = data;
         }
@@ -150,8 +150,8 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setBazFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setBazFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETBAZ,
                     Arrays.<Type>asList(new Baz("id", BigInteger.ONE)),
                     Collections.<TypeReference<?>>emptyList());
@@ -163,8 +163,8 @@ public class AbiV2TestFixture {
 
         public Boz(BigInteger data, String id) {
             super(
-                    new org.web3j.abi.datatypes.generated.Uint256(data),
-                    new org.web3j.abi.datatypes.Utf8String(id));
+                    new org.tpc.abi.datatypes.generated.Uint256(data),
+                    new org.tpc.abi.datatypes.Utf8String(id));
             this.data = data;
             this.id = id;
         }
@@ -176,14 +176,14 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setBozFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setBozFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETBOZ,
                     Arrays.<Type>asList(new Boz(BigInteger.ONE, "id")),
                     Collections.<TypeReference<?>>emptyList());
 
-    public static final org.web3j.abi.datatypes.Function getBozFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getBozFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETBOZ,
                     Collections.<Type>emptyList(),
                     Arrays.<TypeReference<?>>asList(new TypeReference<Boz>() {}));
@@ -194,7 +194,7 @@ public class AbiV2TestFixture {
         public BigInteger data;
 
         public Fuzz(Bar bar, BigInteger data) {
-            super(bar, new org.web3j.abi.datatypes.generated.Uint256(data));
+            super(bar, new org.tpc.abi.datatypes.generated.Uint256(data));
             this.bar = bar;
             this.data = data;
         }
@@ -206,15 +206,15 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setFuzzFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setFuzzFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETFUZZ,
                     Arrays.<Type>asList(
                             new Fuzz(new Bar(BigInteger.ONE, BigInteger.TEN), BigInteger.ONE)),
                     Collections.<TypeReference<?>>emptyList());
 
-    public static final org.web3j.abi.datatypes.Function getFuzzFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getFuzzFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_GETFUZZ,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(new TypeReference<Fuzz>() {}));
@@ -228,14 +228,14 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setNuuFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setNuuFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETNUU,
                     Arrays.<Type>asList(new Nuu(new Foo("id", "name"))),
                     Collections.<TypeReference<?>>emptyList());
 
-    public static final org.web3j.abi.datatypes.Function getNuuFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getNuuFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETNUU,
                     Collections.<Type>emptyList(),
                     Arrays.<TypeReference<?>>asList(new TypeReference<Nuu>() {}));
@@ -255,7 +255,7 @@ public class AbiV2TestFixture {
         public BigInteger data;
 
         public Naz(Nar nar, BigInteger data) {
-            super(nar, new org.web3j.abi.datatypes.generated.Uint256(data));
+            super(nar, new org.tpc.abi.datatypes.generated.Uint256(data));
             this.nar = nar;
             this.data = data;
         }
@@ -267,15 +267,15 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setNazFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setNazFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETNAZ,
                     Arrays.<Type>asList(
                             new Naz(new Nar(new Nuu(new Foo("id", "name"))), BigInteger.ONE)),
                     Collections.<TypeReference<?>>emptyList());
 
-    public static final org.web3j.abi.datatypes.Function getNazFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function getNazFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_GETNAZ,
                     Arrays.<Type>asList(),
                     Arrays.<TypeReference<?>>asList(new TypeReference<Naz>() {}));
@@ -286,7 +286,7 @@ public class AbiV2TestFixture {
         public String data;
 
         public Wiz(Foo foo, String data) {
-            super(foo, new org.web3j.abi.datatypes.Utf8String(data));
+            super(foo, new org.tpc.abi.datatypes.Utf8String(data));
             this.foo = foo;
             this.data = data;
         }
@@ -298,8 +298,8 @@ public class AbiV2TestFixture {
         }
     }
 
-    public static final org.web3j.abi.datatypes.Function setWizFunction =
-            new org.web3j.abi.datatypes.Function(
+    public static final org.tpc.abi.datatypes.Function setWizFunction =
+            new org.tpc.abi.datatypes.Function(
                     FUNC_SETWIZ,
                     Arrays.<Type>asList(new Wiz(new Foo("id", "name"), "data")),
                     Collections.<TypeReference<?>>emptyList());
