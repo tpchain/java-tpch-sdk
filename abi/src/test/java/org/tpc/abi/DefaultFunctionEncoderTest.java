@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi;
+package org.tpc.abi;
 
 import java.lang.reflect.InvocationTargetException;
 import java.math.BigInteger;
@@ -18,10 +18,10 @@ import java.util.*;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.abi.datatypes.*;
-import org.web3j.abi.datatypes.generated.Bytes10;
-import org.web3j.abi.datatypes.generated.Uint256;
-import org.web3j.abi.datatypes.generated.Uint32;
+import org.tpc.abi.datatypes.*;
+import org.tpc.abi.datatypes.generated.Bytes10;
+import org.tpc.abi.datatypes.generated.Uint256;
+import org.tpc.abi.datatypes.generated.Uint32;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
