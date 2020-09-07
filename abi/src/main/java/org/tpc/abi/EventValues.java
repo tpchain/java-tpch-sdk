@@ -10,11 +10,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi;
+package org.tpc.abi;
 
 import java.util.List;
 
-import org.web3j.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Type;
 
 /** Persisted solidity event parameters. */
 public class EventValues {
