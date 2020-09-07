@@ -1,7 +1,7 @@
-package org.web3j.abi.datatypes.generated;
+package org.tpc.abi.datatypes.generated;
 
 import java.math.BigInteger;
-import org.web3j.abi.datatypes.Uint;
+import org.tpc.abi.datatypes.Uint;
 
 /**
  * Auto generated code.
