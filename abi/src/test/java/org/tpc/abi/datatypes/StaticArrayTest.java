@@ -10,15 +10,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.datatypes;
+package org.tpc.abi.datatypes;
 
 import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.abi.datatypes.generated.StaticArray3;
-import org.web3j.abi.datatypes.generated.StaticArray32;
-import org.web3j.abi.datatypes.generated.Uint8;
+import org.tpc.abi.datatypes.generated.StaticArray3;
+import org.tpc.abi.datatypes.generated.StaticArray32;
+import org.tpc.abi.datatypes.generated.Uint8;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
