@@ -1,8 +1,8 @@
-package org.web3j.abi.datatypes.generated;
+package org.tpc.abi.datatypes.generated;
 
 import java.util.List;
-import org.web3j.abi.datatypes.StaticArray;
-import org.web3j.abi.datatypes.Type;
+import org.tpc.abi.datatypes.StaticArray;
+import org.tpc.abi.datatypes.Type;
 
 /**
  * Auto generated code.
