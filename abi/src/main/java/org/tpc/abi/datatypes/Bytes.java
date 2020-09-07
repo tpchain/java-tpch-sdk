@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright 2019 Web3 Labs Ltd.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.datatypes;
+package org.tpc.abi.datatypes;
 
 /** Statically allocated sequence of bytes. */
 public class Bytes extends BytesType {
