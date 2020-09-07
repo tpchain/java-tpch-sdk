@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi;
+package org.tpc.abi;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -19,22 +19,22 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.abi.datatypes.Bool;
-import org.web3j.abi.datatypes.DynamicArray;
-import org.web3j.abi.datatypes.DynamicBytes;
-import org.web3j.abi.datatypes.Fixed;
-import org.web3j.abi.datatypes.Int;
-import org.web3j.abi.datatypes.StaticArray;
-import org.web3j.abi.datatypes.Ufixed;
-import org.web3j.abi.datatypes.Uint;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.abi.datatypes.generated.Int64;
-import org.web3j.abi.datatypes.generated.StaticArray2;
-import org.web3j.abi.datatypes.generated.Uint256;
-import org.web3j.abi.datatypes.generated.Uint64;
+import org.tpc.abi.datatypes.Bool;
+import org.tpc.abi.datatypes.DynamicArray;
+import org.tpc.abi.datatypes.DynamicBytes;
+import org.tpc.abi.datatypes.Fixed;
+import org.tpc.abi.datatypes.Int;
+import org.tpc.abi.datatypes.StaticArray;
+import org.tpc.abi.datatypes.Ufixed;
+import org.tpc.abi.datatypes.Uint;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.abi.datatypes.generated.Int64;
+import org.tpc.abi.datatypes.generated.StaticArray2;
+import org.tpc.abi.datatypes.generated.Uint256;
+import org.tpc.abi.datatypes.generated.Uint64;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.web3j.abi.Utils.typeMap;
+import static org.tpc.abi.Utils.typeMap;
 
 public class UtilsTest {
 
