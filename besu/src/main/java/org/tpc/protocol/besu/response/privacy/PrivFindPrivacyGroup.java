@@ -10,11 +10,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.besu.response.privacy;
+package org.tpc.protocol.besu.response.privacy;
 
 import java.util.List;
 
-import org.web3j.protocol.core.Response;
+import org.tpc.protocol.core.Response;
 
 public class PrivFindPrivacyGroup extends Response<List<PrivacyGroup>> {
     public List<PrivacyGroup> getGroups() {
