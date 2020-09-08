@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx.response;
+package org.tpc.tx.response;
 
 import java.io.IOException;
 import java.util.Optional;
 
-import org.web3j.protocol.besu.Besu;
-import org.web3j.protocol.besu.response.privacy.PrivateTransactionReceipt;
-import org.web3j.protocol.exceptions.TransactionException;
+import org.tpc.protocol.besu.Besu;
+import org.tpc.protocol.besu.response.privacy.PrivateTransactionReceipt;
+import org.tpc.protocol.exceptions.TransactionException;
 
 public class PollingPrivateTransactionReceiptProcessor extends PrivateTransactionReceiptProcessor {
     private final long sleepDuration;
