@@ -10,13 +10,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core.methods.response;
+package org.tpc.protocol.core.methods.response;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.web3j.protocol.core.Response;
+import org.tpc.protocol.core.Response;
 
 /** eth_compileSolidity. */
 public class EthCompileSolidity extends Response<Map<String, EthCompileSolidity.Code>> {
