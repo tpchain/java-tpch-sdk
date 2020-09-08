@@ -10,17 +10,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core.methods.response;
+package org.tpc.protocol.core.methods.response;
 
 import java.util.Collections;
 import java.util.List;
 
-import org.web3j.abi.FunctionReturnDecoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.AbiTypes;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.protocol.core.Response;
+import org.tpc.abi.FunctionReturnDecoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.AbiTypes;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.protocol.core.Response;
 
 /** eth_call. */
 public class EthCall extends Response<String> {
