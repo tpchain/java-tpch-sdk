@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen;
+package org.tpc.codegen.unit.gen;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
@@ -21,11 +21,11 @@ import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 
-import org.web3j.codegen.unit.gen.utils.MappingHelper;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.codegen.unit.gen.utils.MappingHelper;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
 
-import static org.web3j.codegen.unit.gen.utils.NameUtils.returnTypeAsLiteral;
-import static org.web3j.codegen.unit.gen.utils.NameUtils.toCamelCase;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.returnTypeAsLiteral;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.toCamelCase;
 
 public abstract class Parser {
 
