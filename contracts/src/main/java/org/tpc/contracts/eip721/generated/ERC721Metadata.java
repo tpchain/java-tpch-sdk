@@ -1,23 +1,23 @@
-package org.web3j.contracts.eip721.generated;
+package org.tpc.contracts.eip721.generated;
 
 import java.math.BigInteger;
 import java.util.Arrays;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.RemoteCall;
-import org.web3j.tx.Contract;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.RemoteCall;
+import org.tpc.tx.Contract;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
 
 /**
  * <p>Auto generated code.
  * <p><strong>Do not modify!</strong>
  * <p>Please use the <a href="https://docs.web3j.io/command_line.html">web3j command line tools</a>,
- * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
+ * or the org.tpc.codegen.SolidityFunctionWrapperGenerator in the
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
  * <p>Generated with web3j version 4.1.1.
@@ -65,7 +65,7 @@ public class ERC721Metadata extends Contract {
 
     public RemoteCall<String> tokenURI(BigInteger _tokenId) {
         final Function function = new Function(FUNC_TOKENURI, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(_tokenId)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Uint256(_tokenId)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Utf8String>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
