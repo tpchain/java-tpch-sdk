@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
 import io.reactivex.Flowable;
 
-import org.web3j.utils.Async;
+import org.tpc.utils.Async;
 
 /**
  * A common type for wrapping remote requests.
