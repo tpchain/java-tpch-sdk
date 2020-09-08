@@ -10,12 +10,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx;
+package org.tpc.tx;
 
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.besu.Besu;
-import org.web3j.tx.gas.BesuPrivacyGasProvider;
-import org.web3j.utils.Base64String;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.besu.Besu;
+import org.tpc.tx.gas.BesuPrivacyGasProvider;
+import org.tpc.utils.Base64String;
 
 /** PrivateTransactionManager implementation for using a Besu node to transact. */
 public class BesuPrivateTransactionManager extends PrivateTransactionManager {
