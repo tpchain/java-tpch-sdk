@@ -10,21 +10,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.besu.filters;
+package org.tpc.protocol.besu.filters;
 
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Optional;
 
-import org.web3j.protocol.besu.Besu;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.filters.Callback;
-import org.web3j.protocol.core.filters.LogFilter;
-import org.web3j.protocol.core.methods.response.EthFilter;
-import org.web3j.protocol.core.methods.response.EthLog;
-import org.web3j.protocol.core.methods.response.EthUninstallFilter;
-import org.web3j.protocol.core.methods.response.Log;
-import org.web3j.utils.Numeric;
+import org.tpc.protocol.besu.Besu;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.filters.Callback;
+import org.tpc.protocol.core.filters.LogFilter;
+import org.tpc.protocol.core.methods.response.EthFilter;
+import org.tpc.protocol.core.methods.response.EthLog;
+import org.tpc.protocol.core.methods.response.EthUninstallFilter;
+import org.tpc.protocol.core.methods.response.Log;
+import org.tpc.utils.Numeric;
 
 public class PrivateLogFilter extends LogFilter {
 
@@ -34,7 +34,7 @@ public class PrivateLogFilter extends LogFilter {
             Besu web3j,
             Callback<Log> callback,
             String privacyGroupId,
-            org.web3j.protocol.core.methods.request.EthFilter ethFilter) {
+            org.tpc.protocol.core.methods.request.EthFilter ethFilter) {
         super(web3j, callback, ethFilter);
         this.privacyGroupId = privacyGroupId;
     }
