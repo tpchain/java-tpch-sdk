@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,11 +24,11 @@ import javax.tools.ToolProvider;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.TempFileProvider;
+import org.tpc.TempFileProvider;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.codegen.TupleGenerator.CLASS_NAME;
-import static org.web3j.codegen.TupleGenerator.LIMIT;
+import static org.tpc.codegen.TupleGenerator.CLASS_NAME;
+import static org.tpc.codegen.TupleGenerator.LIMIT;
 
 public class TupleGeneratorTest extends TempFileProvider {
 
