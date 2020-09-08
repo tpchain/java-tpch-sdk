@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.web3j.tx.Contract;
+import org.tpc.tx.Contract;
 
-import static org.web3j.codegen.Console.exitError;
+import static org.tpc.codegen.Console.exitError;
 
 /** Abstract base class for the concrete function wrapper generators. */
 abstract class FunctionWrapperGenerator {
