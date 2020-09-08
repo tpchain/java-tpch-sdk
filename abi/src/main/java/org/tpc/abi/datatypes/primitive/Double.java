@@ -10,9 +10,9 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.datatypes.primitive;
+package org.tpc.abi.datatypes.primitive;
 
-import org.web3j.abi.datatypes.NumericType;
+import org.tpc.abi.datatypes.NumericType;
 
 public final class Double extends Number<java.lang.Double> {
 
