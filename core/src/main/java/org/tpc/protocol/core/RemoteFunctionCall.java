@@ -10,15 +10,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import org.web3j.abi.FunctionEncoder;
-import org.web3j.abi.FunctionReturnDecoder;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
+import org.tpc.abi.FunctionEncoder;
+import org.tpc.abi.FunctionReturnDecoder;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
 
 /**
  * A wrapper for a callable function. Can also return the raw encoded function
