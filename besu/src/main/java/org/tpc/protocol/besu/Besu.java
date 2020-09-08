@@ -10,38 +10,38 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.besu;
+package org.tpc.protocol.besu;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ScheduledExecutorService;
 
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3jService;
-import org.web3j.protocol.admin.methods.response.BooleanResponse;
-import org.web3j.protocol.besu.response.BesuEthAccountsMapResponse;
-import org.web3j.protocol.besu.response.BesuFullDebugTraceResponse;
-import org.web3j.protocol.besu.response.BesuSignerMetrics;
-import org.web3j.protocol.besu.response.privacy.PrivCreatePrivacyGroup;
-import org.web3j.protocol.besu.response.privacy.PrivFindPrivacyGroup;
-import org.web3j.protocol.besu.response.privacy.PrivGetPrivacyPrecompileAddress;
-import org.web3j.protocol.besu.response.privacy.PrivGetPrivateTransaction;
-import org.web3j.protocol.besu.response.privacy.PrivGetTransactionReceipt;
-import org.web3j.protocol.besu.response.privacy.PrivateEnclaveKey;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.EthAccounts;
-import org.web3j.protocol.core.methods.response.EthFilter;
-import org.web3j.protocol.core.methods.response.EthGetCode;
-import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
-import org.web3j.protocol.core.methods.response.EthLog;
-import org.web3j.protocol.core.methods.response.EthSendTransaction;
-import org.web3j.protocol.core.methods.response.EthUninstallFilter;
-import org.web3j.protocol.core.methods.response.MinerStartResponse;
-import org.web3j.protocol.eea.Eea;
-import org.web3j.protocol.exceptions.TransactionException;
-import org.web3j.utils.Base64String;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.Web3jService;
+import org.tpc.protocol.admin.methods.response.BooleanResponse;
+import org.tpc.protocol.besu.response.BesuEthAccountsMapResponse;
+import org.tpc.protocol.besu.response.BesuFullDebugTraceResponse;
+import org.tpc.protocol.besu.response.BesuSignerMetrics;
+import org.tpc.protocol.besu.response.privacy.PrivCreatePrivacyGroup;
+import org.tpc.protocol.besu.response.privacy.PrivFindPrivacyGroup;
+import org.tpc.protocol.besu.response.privacy.PrivGetPrivacyPrecompileAddress;
+import org.tpc.protocol.besu.response.privacy.PrivGetPrivateTransaction;
+import org.tpc.protocol.besu.response.privacy.PrivGetTransactionReceipt;
+import org.tpc.protocol.besu.response.privacy.PrivateEnclaveKey;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.EthAccounts;
+import org.tpc.protocol.core.methods.response.EthFilter;
+import org.tpc.protocol.core.methods.response.EthGetCode;
+import org.tpc.protocol.core.methods.response.EthGetTransactionCount;
+import org.tpc.protocol.core.methods.response.EthLog;
+import org.tpc.protocol.core.methods.response.EthSendTransaction;
+import org.tpc.protocol.core.methods.response.EthUninstallFilter;
+import org.tpc.protocol.core.methods.response.MinerStartResponse;
+import org.tpc.protocol.eea.Eea;
+import org.tpc.protocol.exceptions.TransactionException;
+import org.tpc.utils.Base64String;
 
 public interface Besu extends Eea, BesuRx {
 
@@ -153,16 +153,16 @@ public interface Besu extends Eea, BesuRx {
     Request<?, EthGetCode> privGetCode(
             String privacyGroupId, String address, DefaultBlockParameter defaultBlockParameter);
 
-    Request<?, org.web3j.protocol.core.methods.response.EthCall> privCall(
+    Request<?, org.tpc.protocol.core.methods.response.EthCall> privCall(
             String privacyGroupId,
-            org.web3j.protocol.core.methods.request.Transaction transaction,
+            org.tpc.protocol.core.methods.request.Transaction transaction,
             DefaultBlockParameter defaultBlockParameter);
 
     Request<?, EthLog> privGetLogs(
-            String privacyGroupId, org.web3j.protocol.core.methods.request.EthFilter ethFilter);
+            String privacyGroupId, org.tpc.protocol.core.methods.request.EthFilter ethFilter);
 
     Request<?, EthFilter> privNewFilter(
-            String privacyGroupId, org.web3j.protocol.core.methods.request.EthFilter ethFilter);
+            String privacyGroupId, org.tpc.protocol.core.methods.request.EthFilter ethFilter);
 
     Request<?, EthUninstallFilter> privUninstallFilter(String privacyGroupId, String filterId);
 
