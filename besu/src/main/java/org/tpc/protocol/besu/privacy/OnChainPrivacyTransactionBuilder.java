@@ -10,25 +10,25 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.besu.privacy;
+package org.tpc.protocol.besu.privacy;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.web3j.abi.FunctionEncoder;
-import org.web3j.abi.Utils;
-import org.web3j.abi.datatypes.DynamicArray;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.generated.Bytes32;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.eea.crypto.PrivateTransactionEncoder;
-import org.web3j.protocol.eea.crypto.RawPrivateTransaction;
-import org.web3j.tx.gas.BesuPrivacyGasProvider;
-import org.web3j.utils.Base64String;
-import org.web3j.utils.Numeric;
-import org.web3j.utils.Restriction;
+import org.tpc.abi.FunctionEncoder;
+import org.tpc.abi.Utils;
+import org.tpc.abi.datatypes.DynamicArray;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.generated.Bytes32;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.eea.crypto.PrivateTransactionEncoder;
+import org.tpc.protocol.eea.crypto.RawPrivateTransaction;
+import org.tpc.tx.gas.BesuPrivacyGasProvider;
+import org.tpc.utils.Base64String;
+import org.tpc.utils.Numeric;
+import org.tpc.utils.Restriction;
 
 public class OnChainPrivacyTransactionBuilder {
 
@@ -37,8 +37,8 @@ public class OnChainPrivacyTransactionBuilder {
 
     public static String getEncodedRemoveFromGroupFunction(
             Base64String enclaveKey, byte[] participant) {
-        final org.web3j.abi.datatypes.Function function =
-                new org.web3j.abi.datatypes.Function(
+        final org.tpc.abi.datatypes.Function function =
+                new org.tpc.abi.datatypes.Function(
                         "removeParticipant",
                         Arrays.asList(new Bytes32(enclaveKey.raw()), new Bytes32(participant)),
                         Collections.emptyList());
