@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.kotlin;
+package org.tpc.codegen.unit.gen.kotlin;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ import java.util.Map;
 import com.squareup.kotlinpoet.FunSpec;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.Web3j;
+import org.tpc.protocol.Web3j;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -41,7 +41,7 @@ public class FunSpecGeneratorTest {
                 "@org.junit.jupiter.api.Test\n"
                         + "fun test() {\n"
                         + "  val hello  =  \"Hello how are you\"\n"
-                        + "  val web3j = org.web3j.protocol.Web3j.build()\n"
+                        + "  val web3j = org.tpc.protocol.Web3j.build()\n"
                         + "}\n");
     }
 }
