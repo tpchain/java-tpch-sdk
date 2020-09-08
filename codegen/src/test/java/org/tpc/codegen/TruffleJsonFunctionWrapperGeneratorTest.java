@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,16 +26,16 @@ import javax.tools.ToolProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.TempFileProvider;
-import org.web3j.utils.Strings;
+import org.tpc.TempFileProvider;
+import org.tpc.utils.Strings;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.codegen.FunctionWrapperGenerator.JAVA_TYPES_ARG;
-import static org.web3j.codegen.FunctionWrapperGenerator.SOLIDITY_TYPES_ARG;
+import static org.tpc.codegen.FunctionWrapperGenerator.JAVA_TYPES_ARG;
+import static org.tpc.codegen.FunctionWrapperGenerator.SOLIDITY_TYPES_ARG;
 
 public class TruffleJsonFunctionWrapperGeneratorTest extends TempFileProvider {
 
-    private static final String PackageName = "org.web3j.unittests.truffle.java";
+    private static final String PackageName = "org.tpc.unittests.truffle.java";
 
     private String contractBaseDir;
 
