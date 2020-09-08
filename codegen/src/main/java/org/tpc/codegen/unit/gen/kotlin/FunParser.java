@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.kotlin;
+package org.tpc.codegen.unit.gen.kotlin;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -24,12 +24,12 @@ import com.squareup.kotlinpoet.FunSpec;
 import com.squareup.kotlinpoet.ParameterSpec;
 import org.junit.jupiter.api.BeforeAll;
 
-import org.web3j.codegen.unit.gen.utils.KotlinMappingHelper;
-import org.web3j.protocol.Web3j;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
+import org.tpc.codegen.unit.gen.utils.KotlinMappingHelper;
+import org.tpc.protocol.Web3j;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
 
-import static org.web3j.codegen.unit.gen.utils.NameUtils.toCamelCase;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.toCamelCase;
 
 public class FunParser {
     private final Method method;
