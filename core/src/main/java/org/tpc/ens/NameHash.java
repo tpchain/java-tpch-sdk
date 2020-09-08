@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.ens;
+package org.tpc.ens;
 
 import java.net.IDN;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-import org.web3j.crypto.Hash;
-import org.web3j.utils.Numeric;
+import org.tpc.crypto.Hash;
+import org.tpc.utils.Numeric;
 
 /** ENS name hash implementation. */
 public class NameHash {
