@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.kotlin;
+package org.tpc.codegen.unit.gen.kotlin;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
@@ -18,11 +18,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.web3j.codegen.unit.gen.Parser;
-import org.web3j.codegen.unit.gen.utils.MappingHelper;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.codegen.unit.gen.Parser;
+import org.tpc.codegen.unit.gen.utils.MappingHelper;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
 
-import static org.web3j.codegen.unit.gen.utils.NameUtils.toCamelCase;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.toCamelCase;
 
 public class KotlinParser extends Parser {
 
