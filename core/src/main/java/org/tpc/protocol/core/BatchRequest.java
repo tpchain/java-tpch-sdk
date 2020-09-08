@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import org.web3j.protocol.Web3jService;
+import org.tpc.protocol.Web3jService;
 
 public class BatchRequest {
 
