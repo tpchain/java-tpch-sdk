@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -46,41 +46,41 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.web3j.abi.EventEncoder;
-import org.web3j.abi.FunctionEncoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.DynamicStruct;
-import org.web3j.abi.datatypes.Event;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.StaticArray;
-import org.web3j.abi.datatypes.StaticStruct;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.abi.datatypes.primitive.Byte;
-import org.web3j.abi.datatypes.primitive.Char;
-import org.web3j.abi.datatypes.primitive.Double;
-import org.web3j.abi.datatypes.primitive.Float;
-import org.web3j.abi.datatypes.primitive.Int;
-import org.web3j.abi.datatypes.primitive.Long;
-import org.web3j.abi.datatypes.primitive.Short;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.ObjectMapperFactory;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.RemoteCall;
-import org.web3j.protocol.core.RemoteFunctionCall;
-import org.web3j.protocol.core.methods.request.EthFilter;
-import org.web3j.protocol.core.methods.response.AbiDefinition;
-import org.web3j.protocol.core.methods.response.BaseEventResponse;
-import org.web3j.protocol.core.methods.response.Log;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.tx.Contract;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
-import org.web3j.utils.Collection;
-import org.web3j.utils.Strings;
-import org.web3j.utils.Version;
+import org.tpc.abi.EventEncoder;
+import org.tpc.abi.FunctionEncoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.abi.datatypes.DynamicStruct;
+import org.tpc.abi.datatypes.Event;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.StaticArray;
+import org.tpc.abi.datatypes.StaticStruct;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.abi.datatypes.primitive.Byte;
+import org.tpc.abi.datatypes.primitive.Char;
+import org.tpc.abi.datatypes.primitive.Double;
+import org.tpc.abi.datatypes.primitive.Float;
+import org.tpc.abi.datatypes.primitive.Int;
+import org.tpc.abi.datatypes.primitive.Long;
+import org.tpc.abi.datatypes.primitive.Short;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.ObjectMapperFactory;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.RemoteCall;
+import org.tpc.protocol.core.RemoteFunctionCall;
+import org.tpc.protocol.core.methods.request.EthFilter;
+import org.tpc.protocol.core.methods.response.AbiDefinition;
+import org.tpc.protocol.core.methods.response.BaseEventResponse;
+import org.tpc.protocol.core.methods.response.Log;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.tx.Contract;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
+import org.tpc.utils.Collection;
+import org.tpc.utils.Strings;
+import org.tpc.utils.Version;
 
 /** Generate Java Classes based on generated Solidity bin and abi files. */
 public class SolidityFunctionWrapper extends Generator {
@@ -938,7 +938,7 @@ public class SolidityFunctionWrapper extends Generator {
                         + "        "
                         + componentType
                         + ".class,\n"
-                        + "        org.web3j.abi.Utils.typeMap("
+                        + "        org.tpc.abi.Utils.typeMap("
                         + parameterSpec.name
                         + ", "
                         + typeMapInput
@@ -1290,7 +1290,7 @@ public class SolidityFunctionWrapper extends Generator {
             ParameterizedTypeName parameterizedTupleType =
                     ParameterizedTypeName.get(
                             ClassName.get(
-                                    "org.web3j.tuples.generated", "Tuple" + returnTypes.size()),
+                                    "org.tpc.tuples.generated", "Tuple" + returnTypes.size()),
                             returnTypes.toArray(new TypeName[0]));
 
             methodBuilder.returns(buildRemoteFunctionCall(parameterizedTupleType));
@@ -1354,14 +1354,14 @@ public class SolidityFunctionWrapper extends Generator {
 
     TypeSpec buildEventResponseObject(
             String className,
-            List<org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName> indexedParameters,
-            List<org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName> nonIndexedParameters) {
+            List<org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName> indexedParameters,
+            List<org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName> nonIndexedParameters) {
 
         TypeSpec.Builder builder =
                 TypeSpec.classBuilder(className).addModifiers(Modifier.PUBLIC, Modifier.STATIC);
 
         builder.superclass(BaseEventResponse.class);
-        for (org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName namedType :
+        for (org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName namedType :
                 indexedParameters) {
             final TypeName typeName;
             if (namedType.getType().equals("tuple")) {
@@ -1372,7 +1372,7 @@ public class SolidityFunctionWrapper extends Generator {
             builder.addField(typeName, namedType.getName(), Modifier.PUBLIC);
         }
 
-        for (org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName namedType :
+        for (org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName namedType :
                 nonIndexedParameters) {
             final TypeName typeName;
             if (namedType.getType().equals("tuple")) {
@@ -1389,8 +1389,8 @@ public class SolidityFunctionWrapper extends Generator {
     MethodSpec buildEventFlowableFunction(
             String responseClassName,
             String functionName,
-            List<org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName> indexedParameters,
-            List<org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName> nonIndexedParameters)
+            List<org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName> indexedParameters,
+            List<org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName> nonIndexedParameters)
             throws ClassNotFoundException {
 
         String generatedFunctionName = Strings.lowercaseFirstLetter(functionName) + "EventFlowable";
@@ -1561,8 +1561,8 @@ public class SolidityFunctionWrapper extends Generator {
 
     CodeBlock buildTypedResponse(
             String objectName,
-            List<org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName> indexedParameters,
-            List<org.web3j.codegen.SolidityFunctionWrapper.NamedTypeName> nonIndexedParameters,
+            List<org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName> indexedParameters,
+            List<org.tpc.codegen.SolidityFunctionWrapper.NamedTypeName> nonIndexedParameters,
             boolean flowable) {
         CodeBlock.Builder builder = CodeBlock.builder();
         if (flowable) {
@@ -1643,7 +1643,7 @@ public class SolidityFunctionWrapper extends Generator {
 
     private static Class<?> getStaticArrayTypeReferenceClass(String type) {
         try {
-            return Class.forName("org.web3j.abi.datatypes.generated.StaticArray" + type);
+            return Class.forName("org.tpc.abi.datatypes.generated.StaticArray" + type);
         } catch (ClassNotFoundException e) {
             // Unfortunately we can't encode it's length as a type if it's > 32.
             return StaticArray.class;
