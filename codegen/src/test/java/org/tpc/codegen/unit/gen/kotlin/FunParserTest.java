@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.kotlin;
+package org.tpc.codegen.unit.gen.kotlin;
 
 import java.lang.reflect.Method;
 import java.util.Optional;
@@ -30,9 +30,9 @@ public class FunParserTest extends Setup {
                 deployFunSpec.toString(),
                 "@org.junit.jupiter.api.BeforeAll\n"
                         + "fun deploy(\n"
-                        + "  web3j: org.web3j.protocol.Web3j,\n"
-                        + "  transactionManager: org.web3j.tx.TransactionManager,\n"
-                        + "  contractGasProvider: org.web3j.tx.gas.ContractGasProvider\n"
+                        + "  web3j: org.tpc.protocol.Web3j,\n"
+                        + "  transactionManager: org.tpc.tx.TransactionManager,\n"
+                        + "  contractGasProvider: org.tpc.tx.gas.ContractGasProvider\n"
                         + ") {\n"
                         + "   greeter = org.com.test.contract.Greeter.deploy(web3j, transactionManager, contractGasProvider, \"REPLACE_ME\").send()\n"
                         + "}\n");
