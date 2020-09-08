@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.java;
+package org.tpc.codegen.unit.gen.java;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
@@ -22,7 +22,7 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.Web3j;
+import org.tpc.protocol.Web3j;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -46,9 +46,9 @@ public class MethodSpecGeneratorTest {
         MethodSpec generatedMethodSpec = methodSpecGenerator.generate();
         assertEquals(
                 "@org.junit.jupiter.api.Test\n"
-                        + "public void unitTest(final org.web3j.protocol.Web3j web3j) throws java.lang.Exception {\n"
+                        + "public void unitTest(final org.tpc.protocol.Web3j web3j) throws java.lang.Exception {\n"
                         + "  java.lang.String hello  = \"Hello how are you\";\n"
-                        + "  org.web3j.protocol.Web3j web3j = org.web3j.protocol.Web3j.build();\n"
+                        + "  org.tpc.protocol.Web3j web3j = org.tpc.protocol.Web3j.build();\n"
                         + "}\n",
                 generatedMethodSpec.toString());
     }
