@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.java;
+package org.tpc.codegen.unit.gen.java;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,11 +21,11 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 
-import org.web3j.codegen.unit.gen.MethodFilter;
-import org.web3j.codegen.unit.gen.UnitClassGenerator;
-import org.web3j.commons.JavaVersion;
+import org.tpc.codegen.unit.gen.MethodFilter;
+import org.tpc.codegen.unit.gen.UnitClassGenerator;
+import org.tpc.commons.JavaVersion;
 
-import static org.web3j.codegen.unit.gen.utils.NameUtils.toCamelCase;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.toCamelCase;
 
 /**
  * Class that generates the unit tests classes for the contracts. The class writes to
@@ -44,10 +44,10 @@ public class JavaClassGenerator implements UnitClassGenerator {
 
     @Override
     public void writeClass() throws IOException {
-        ClassName EVM_ANNOTATION = ClassName.get("org.web3j", "EVMTest");
+        ClassName EVM_ANNOTATION = ClassName.get("org.tpc", "EVMTest");
         AnnotationSpec.Builder annotationSpec = AnnotationSpec.builder(EVM_ANNOTATION);
         if (JavaVersion.getJavaVersionAsDouble() < 11) {
-            ClassName GethContainer = ClassName.get("org.web3j", "NodeType");
+            ClassName GethContainer = ClassName.get("org.tpc", "NodeType");
             annotationSpec.addMember("value", "type = $T.GETH", GethContainer);
         }
         TypeSpec testClass =
