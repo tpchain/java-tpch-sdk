@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.kotlin;
+package org.tpc.codegen.unit.gen.kotlin;
 
 import java.io.File;
 
@@ -19,11 +19,11 @@ import com.squareup.kotlinpoet.KModifier;
 import com.squareup.kotlinpoet.PropertySpec;
 import com.squareup.kotlinpoet.TypeSpec;
 
-import org.web3j.codegen.unit.gen.MethodFilter;
-import org.web3j.codegen.unit.gen.UnitClassGenerator;
-import org.web3j.commons.JavaVersion;
+import org.tpc.codegen.unit.gen.MethodFilter;
+import org.tpc.codegen.unit.gen.UnitClassGenerator;
+import org.tpc.commons.JavaVersion;
 
-import static org.web3j.codegen.unit.gen.utils.NameUtils.toCamelCase;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.toCamelCase;
 
 public class KotlinClassGenerator implements UnitClassGenerator {
 
@@ -41,14 +41,14 @@ public class KotlinClassGenerator implements UnitClassGenerator {
     @Override
     public void writeClass() throws Exception {
         com.squareup.kotlinpoet.ClassName EVM_ANNOTATION =
-                new com.squareup.kotlinpoet.ClassName("org.web3j", "EVMTest");
+                new com.squareup.kotlinpoet.ClassName("org.tpc", "EVMTest");
 
         com.squareup.kotlinpoet.AnnotationSpec.Builder annotationSpec =
                 com.squareup.kotlinpoet.AnnotationSpec.builder(EVM_ANNOTATION);
 
         if (JavaVersion.getJavaVersionAsDouble() < 11) {
             com.squareup.kotlinpoet.ClassName gethContainer =
-                    new com.squareup.kotlinpoet.ClassName("org.web3j", "NodeType");
+                    new com.squareup.kotlinpoet.ClassName("org.tpc", "NodeType");
             annotationSpec.addMember("%T.GETH", gethContainer);
         }
         com.squareup.kotlinpoet.ClassName TEST_INSTANCE_ANNOTATION =
