@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.kotlin;
+package org.tpc.codegen.unit.gen.kotlin;
 
 import java.lang.reflect.Method;
 import java.util.List;
@@ -18,10 +18,10 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.codegen.unit.gen.MethodFilter;
-import org.web3j.codegen.unit.gen.Parser;
-import org.web3j.codegen.unit.gen.utils.KotlinMappingHelper;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.codegen.unit.gen.MethodFilter;
+import org.tpc.codegen.unit.gen.Parser;
+import org.tpc.codegen.unit.gen.utils.KotlinMappingHelper;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
