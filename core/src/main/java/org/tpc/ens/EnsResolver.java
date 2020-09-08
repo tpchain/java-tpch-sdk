@@ -10,21 +10,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.ens;
+package org.tpc.ens;
 
-import org.web3j.crypto.Keys;
-import org.web3j.crypto.WalletUtils;
-import org.web3j.ens.contracts.generated.ENS;
-import org.web3j.ens.contracts.generated.PublicResolver;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.response.EthBlock;
-import org.web3j.protocol.core.methods.response.EthSyncing;
-import org.web3j.protocol.core.methods.response.NetVersion;
-import org.web3j.tx.ClientTransactionManager;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.DefaultGasProvider;
-import org.web3j.utils.Numeric;
+import org.tpc.crypto.Keys;
+import org.tpc.crypto.WalletUtils;
+import org.tpc.ens.contracts.generated.ENS;
+import org.tpc.ens.contracts.generated.PublicResolver;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.DefaultBlockParameterName;
+import org.tpc.protocol.core.methods.response.EthBlock;
+import org.tpc.protocol.core.methods.response.EthSyncing;
+import org.tpc.protocol.core.methods.response.NetVersion;
+import org.tpc.tx.ClientTransactionManager;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.DefaultGasProvider;
+import org.tpc.utils.Numeric;
 
 /** Resolution logic for contract addresses. */
 public class EnsResolver {
