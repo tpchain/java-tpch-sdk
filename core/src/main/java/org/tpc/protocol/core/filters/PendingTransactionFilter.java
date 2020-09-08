@@ -10,17 +10,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core.filters;
+package org.tpc.protocol.core.filters;
 
 import java.io.IOException;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Optional;
 
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.EthFilter;
-import org.web3j.protocol.core.methods.response.EthLog;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.EthFilter;
+import org.tpc.protocol.core.methods.response.EthLog;
 
 /** Handler for working with transaction filter requests. */
 public class PendingTransactionFilter extends Filter<String> {
