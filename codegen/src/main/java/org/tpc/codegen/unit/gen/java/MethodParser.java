@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.java;
+package org.tpc.codegen.unit.gen.java;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -25,12 +25,12 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
 import org.junit.jupiter.api.BeforeAll;
 
-import org.web3j.codegen.unit.gen.utils.JavaMappingHelper;
-import org.web3j.protocol.Web3j;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
+import org.tpc.codegen.unit.gen.utils.JavaMappingHelper;
+import org.tpc.protocol.Web3j;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
 
-import static org.web3j.codegen.unit.gen.utils.NameUtils.toCamelCase;
+import static org.tpc.codegen.unit.gen.utils.NameUtils.toCamelCase;
 
 /*Class that when given a method provides a JavaPoet method spec. */
 public class MethodParser {
