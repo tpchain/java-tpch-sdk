@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,14 +22,14 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
 import com.squareup.javapoet.TypeVariableName;
 
-import org.web3j.tuples.Tuple;
-import org.web3j.utils.Strings;
+import org.tpc.tuples.Tuple;
+import org.tpc.utils.Strings;
 
 /** A class for generating arbitrary sized tuples. */
 public class TupleGenerator extends Generator {
 
     static final int LIMIT = 20;
-    static final String PACKAGE_NAME = "org.web3j.tuples.generated";
+    static final String PACKAGE_NAME = "org.tpc.tuples.generated";
     static final String CLASS_NAME = "Tuple";
 
     private static final String SIZE = "SIZE";
