@@ -10,62 +10,62 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import java.math.BigInteger;
 
-import org.web3j.protocol.core.methods.request.ShhFilter;
-import org.web3j.protocol.core.methods.response.DbGetHex;
-import org.web3j.protocol.core.methods.response.DbGetString;
-import org.web3j.protocol.core.methods.response.DbPutHex;
-import org.web3j.protocol.core.methods.response.DbPutString;
-import org.web3j.protocol.core.methods.response.EthAccounts;
-import org.web3j.protocol.core.methods.response.EthBlock;
-import org.web3j.protocol.core.methods.response.EthBlockNumber;
-import org.web3j.protocol.core.methods.response.EthChainId;
-import org.web3j.protocol.core.methods.response.EthCoinbase;
-import org.web3j.protocol.core.methods.response.EthCompileLLL;
-import org.web3j.protocol.core.methods.response.EthCompileSerpent;
-import org.web3j.protocol.core.methods.response.EthCompileSolidity;
-import org.web3j.protocol.core.methods.response.EthEstimateGas;
-import org.web3j.protocol.core.methods.response.EthFilter;
-import org.web3j.protocol.core.methods.response.EthGasPrice;
-import org.web3j.protocol.core.methods.response.EthGetBalance;
-import org.web3j.protocol.core.methods.response.EthGetBlockTransactionCountByHash;
-import org.web3j.protocol.core.methods.response.EthGetBlockTransactionCountByNumber;
-import org.web3j.protocol.core.methods.response.EthGetCode;
-import org.web3j.protocol.core.methods.response.EthGetCompilers;
-import org.web3j.protocol.core.methods.response.EthGetStorageAt;
-import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
-import org.web3j.protocol.core.methods.response.EthGetTransactionReceipt;
-import org.web3j.protocol.core.methods.response.EthGetUncleCountByBlockHash;
-import org.web3j.protocol.core.methods.response.EthGetUncleCountByBlockNumber;
-import org.web3j.protocol.core.methods.response.EthGetWork;
-import org.web3j.protocol.core.methods.response.EthHashrate;
-import org.web3j.protocol.core.methods.response.EthLog;
-import org.web3j.protocol.core.methods.response.EthMining;
-import org.web3j.protocol.core.methods.response.EthProtocolVersion;
-import org.web3j.protocol.core.methods.response.EthSign;
-import org.web3j.protocol.core.methods.response.EthSubmitHashrate;
-import org.web3j.protocol.core.methods.response.EthSubmitWork;
-import org.web3j.protocol.core.methods.response.EthSyncing;
-import org.web3j.protocol.core.methods.response.EthTransaction;
-import org.web3j.protocol.core.methods.response.EthUninstallFilter;
-import org.web3j.protocol.core.methods.response.NetListening;
-import org.web3j.protocol.core.methods.response.NetPeerCount;
-import org.web3j.protocol.core.methods.response.NetVersion;
-import org.web3j.protocol.core.methods.response.ShhAddToGroup;
-import org.web3j.protocol.core.methods.response.ShhHasIdentity;
-import org.web3j.protocol.core.methods.response.ShhMessages;
-import org.web3j.protocol.core.methods.response.ShhNewFilter;
-import org.web3j.protocol.core.methods.response.ShhNewGroup;
-import org.web3j.protocol.core.methods.response.ShhNewIdentity;
-import org.web3j.protocol.core.methods.response.ShhUninstallFilter;
-import org.web3j.protocol.core.methods.response.ShhVersion;
-import org.web3j.protocol.core.methods.response.Web3ClientVersion;
-import org.web3j.protocol.core.methods.response.Web3Sha3;
-import org.web3j.protocol.core.methods.response.admin.AdminNodeInfo;
-import org.web3j.protocol.core.methods.response.admin.AdminPeers;
+import org.tpc.protocol.core.methods.request.ShhFilter;
+import org.tpc.protocol.core.methods.response.DbGetHex;
+import org.tpc.protocol.core.methods.response.DbGetString;
+import org.tpc.protocol.core.methods.response.DbPutHex;
+import org.tpc.protocol.core.methods.response.DbPutString;
+import org.tpc.protocol.core.methods.response.EthAccounts;
+import org.tpc.protocol.core.methods.response.EthBlock;
+import org.tpc.protocol.core.methods.response.EthBlockNumber;
+import org.tpc.protocol.core.methods.response.EthChainId;
+import org.tpc.protocol.core.methods.response.EthCoinbase;
+import org.tpc.protocol.core.methods.response.EthCompileLLL;
+import org.tpc.protocol.core.methods.response.EthCompileSerpent;
+import org.tpc.protocol.core.methods.response.EthCompileSolidity;
+import org.tpc.protocol.core.methods.response.EthEstimateGas;
+import org.tpc.protocol.core.methods.response.EthFilter;
+import org.tpc.protocol.core.methods.response.EthGasPrice;
+import org.tpc.protocol.core.methods.response.EthGetBalance;
+import org.tpc.protocol.core.methods.response.EthGetBlockTransactionCountByHash;
+import org.tpc.protocol.core.methods.response.EthGetBlockTransactionCountByNumber;
+import org.tpc.protocol.core.methods.response.EthGetCode;
+import org.tpc.protocol.core.methods.response.EthGetCompilers;
+import org.tpc.protocol.core.methods.response.EthGetStorageAt;
+import org.tpc.protocol.core.methods.response.EthGetTransactionCount;
+import org.tpc.protocol.core.methods.response.EthGetTransactionReceipt;
+import org.tpc.protocol.core.methods.response.EthGetUncleCountByBlockHash;
+import org.tpc.protocol.core.methods.response.EthGetUncleCountByBlockNumber;
+import org.tpc.protocol.core.methods.response.EthGetWork;
+import org.tpc.protocol.core.methods.response.EthHashrate;
+import org.tpc.protocol.core.methods.response.EthLog;
+import org.tpc.protocol.core.methods.response.EthMining;
+import org.tpc.protocol.core.methods.response.EthProtocolVersion;
+import org.tpc.protocol.core.methods.response.EthSign;
+import org.tpc.protocol.core.methods.response.EthSubmitHashrate;
+import org.tpc.protocol.core.methods.response.EthSubmitWork;
+import org.tpc.protocol.core.methods.response.EthSyncing;
+import org.tpc.protocol.core.methods.response.EthTransaction;
+import org.tpc.protocol.core.methods.response.EthUninstallFilter;
+import org.tpc.protocol.core.methods.response.NetListening;
+import org.tpc.protocol.core.methods.response.NetPeerCount;
+import org.tpc.protocol.core.methods.response.NetVersion;
+import org.tpc.protocol.core.methods.response.ShhAddToGroup;
+import org.tpc.protocol.core.methods.response.ShhHasIdentity;
+import org.tpc.protocol.core.methods.response.ShhMessages;
+import org.tpc.protocol.core.methods.response.ShhNewFilter;
+import org.tpc.protocol.core.methods.response.ShhNewGroup;
+import org.tpc.protocol.core.methods.response.ShhNewIdentity;
+import org.tpc.protocol.core.methods.response.ShhUninstallFilter;
+import org.tpc.protocol.core.methods.response.ShhVersion;
+import org.tpc.protocol.core.methods.response.Web3ClientVersion;
+import org.tpc.protocol.core.methods.response.Web3Sha3;
+import org.tpc.protocol.core.methods.response.admin.AdminNodeInfo;
+import org.tpc.protocol.core.methods.response.admin.AdminPeers;
 
 /** Core Ethereum JSON-RPC API. */
 public interface Ethereum {
@@ -125,18 +125,18 @@ public interface Ethereum {
 
     Request<?, EthSign> ethSign(String address, String sha3HashOfDataToSign);
 
-    Request<?, org.web3j.protocol.core.methods.response.EthSendTransaction> ethSendTransaction(
-            org.web3j.protocol.core.methods.request.Transaction transaction);
+    Request<?, org.tpc.protocol.core.methods.response.EthSendTransaction> ethSendTransaction(
+            org.tpc.protocol.core.methods.request.Transaction transaction);
 
-    Request<?, org.web3j.protocol.core.methods.response.EthSendTransaction> ethSendRawTransaction(
+    Request<?, org.tpc.protocol.core.methods.response.EthSendTransaction> ethSendRawTransaction(
             String signedTransactionData);
 
-    Request<?, org.web3j.protocol.core.methods.response.EthCall> ethCall(
-            org.web3j.protocol.core.methods.request.Transaction transaction,
+    Request<?, org.tpc.protocol.core.methods.response.EthCall> ethCall(
+            org.tpc.protocol.core.methods.request.Transaction transaction,
             DefaultBlockParameter defaultBlockParameter);
 
     Request<?, EthEstimateGas> ethEstimateGas(
-            org.web3j.protocol.core.methods.request.Transaction transaction);
+            org.tpc.protocol.core.methods.request.Transaction transaction);
 
     Request<?, EthBlock> ethGetBlockByHash(String blockHash, boolean returnFullTransactionObjects);
 
@@ -167,7 +167,7 @@ public interface Ethereum {
 
     Request<?, EthCompileSerpent> ethCompileSerpent(String sourceCode);
 
-    Request<?, EthFilter> ethNewFilter(org.web3j.protocol.core.methods.request.EthFilter ethFilter);
+    Request<?, EthFilter> ethNewFilter(org.tpc.protocol.core.methods.request.EthFilter ethFilter);
 
     Request<?, EthFilter> ethNewBlockFilter();
 
@@ -179,7 +179,7 @@ public interface Ethereum {
 
     Request<?, EthLog> ethGetFilterLogs(BigInteger filterId);
 
-    Request<?, EthLog> ethGetLogs(org.web3j.protocol.core.methods.request.EthFilter ethFilter);
+    Request<?, EthLog> ethGetLogs(org.tpc.protocol.core.methods.request.EthFilter ethFilter);
 
     Request<?, EthGetWork> ethGetWork();
 
@@ -195,8 +195,8 @@ public interface Ethereum {
 
     Request<?, DbGetHex> dbGetHex(String databaseName, String keyName);
 
-    Request<?, org.web3j.protocol.core.methods.response.ShhPost> shhPost(
-            org.web3j.protocol.core.methods.request.ShhPost shhPost);
+    Request<?, org.tpc.protocol.core.methods.response.ShhPost> shhPost(
+            org.tpc.protocol.core.methods.request.ShhPost shhPost);
 
     Request<?, ShhVersion> shhVersion();
 
