@@ -1,22 +1,22 @@
 package org.com.test.contract;
 
-import org.web3j.abi.FunctionEncoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.Bool;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.generated.Bytes32;
-import org.web3j.abi.datatypes.generated.Uint256;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.RemoteCall;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.tuples.generated.Tuple2;
-import org.web3j.tuples.generated.Tuple4;
-import org.web3j.tx.Contract;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
+import org.tpc.abi.FunctionEncoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.abi.datatypes.Bool;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.generated.Bytes32;
+import org.tpc.abi.datatypes.generated.Uint256;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.RemoteCall;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.tuples.generated.Tuple2;
+import org.tpc.tuples.generated.Tuple4;
+import org.tpc.tx.Contract;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
 
 import java.math.BigInteger;
 import java.util.Arrays;
@@ -28,7 +28,7 @@ import java.util.concurrent.Callable;
  * <p>Auto generated code.
  * <p><strong>Do not modify!</strong>
  * <p>Please use the <a href="https://docs.web3j.io/command_line.html">web3j command line tools</a>,
- * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
+ * or the org.tpc.codegen.SolidityFunctionWrapperGenerator in the
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
  * <p>Generated with web3j version 4.4.0.
@@ -73,14 +73,14 @@ public class Ballot extends Contract {
     public RemoteCall<TransactionReceipt> vote(BigInteger proposal) {
         final Function function = new Function(
                 FUNC_VOTE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(proposal)),
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Uint256(proposal)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<Tuple2<byte[], BigInteger>> proposals(BigInteger param0) {
         final Function function = new Function(FUNC_PROPOSALS,
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(param0)),
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Uint256(param0)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Bytes32>() {}, new TypeReference<Uint256>() {}));
         return new RemoteCall<Tuple2<byte[], BigInteger>>(
                 new Callable<Tuple2<byte[], BigInteger>>() {
@@ -104,7 +104,7 @@ public class Ballot extends Contract {
     public RemoteCall<TransactionReceipt> delegate(String to) {
         final Function function = new Function(
                 FUNC_DELEGATE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(to)),
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(to)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
@@ -119,14 +119,14 @@ public class Ballot extends Contract {
     public RemoteCall<TransactionReceipt> giveRightToVote(String voter) {
         final Function function = new Function(
                 FUNC_GIVERIGHTTOVOTE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(voter)),
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(voter)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<Tuple4<BigInteger, Boolean, String, BigInteger>> voters(String param0) {
         final Function function = new Function(FUNC_VOTERS,
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(param0)),
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(param0)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}, new TypeReference<Bool>() {}, new TypeReference<Address>() {}, new TypeReference<Uint256>() {}));
         return new RemoteCall<Tuple4<BigInteger, Boolean, String, BigInteger>>(
                 new Callable<Tuple4<BigInteger, Boolean, String, BigInteger>>() {
@@ -168,32 +168,32 @@ public class Ballot extends Contract {
     }
 
     public static RemoteCall<Ballot> deploy(Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider, List<byte[]> proposalNames) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.generated.Bytes32>(
-                        org.web3j.abi.datatypes.generated.Bytes32.class,
-                        org.web3j.abi.Utils.typeMap(proposalNames, org.web3j.abi.datatypes.generated.Bytes32.class))));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.DynamicArray<org.tpc.abi.datatypes.generated.Bytes32>(
+                        org.tpc.abi.datatypes.generated.Bytes32.class,
+                        org.tpc.abi.Utils.typeMap(proposalNames, org.tpc.abi.datatypes.generated.Bytes32.class))));
         return deployRemoteCall(Ballot.class, web3j, credentials, contractGasProvider, BINARY, encodedConstructor);
     }
 
     public static RemoteCall<Ballot> deploy(Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider, List<byte[]> proposalNames) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.generated.Bytes32>(
-                        org.web3j.abi.datatypes.generated.Bytes32.class,
-                        org.web3j.abi.Utils.typeMap(proposalNames, org.web3j.abi.datatypes.generated.Bytes32.class))));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.DynamicArray<org.tpc.abi.datatypes.generated.Bytes32>(
+                        org.tpc.abi.datatypes.generated.Bytes32.class,
+                        org.tpc.abi.Utils.typeMap(proposalNames, org.tpc.abi.datatypes.generated.Bytes32.class))));
         return deployRemoteCall(Ballot.class, web3j, transactionManager, contractGasProvider, BINARY, encodedConstructor);
     }
 
     @Deprecated
     public static RemoteCall<Ballot> deploy(Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit, List<byte[]> proposalNames) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.generated.Bytes32>(
-                        org.web3j.abi.datatypes.generated.Bytes32.class,
-                        org.web3j.abi.Utils.typeMap(proposalNames, org.web3j.abi.datatypes.generated.Bytes32.class))));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.DynamicArray<org.tpc.abi.datatypes.generated.Bytes32>(
+                        org.tpc.abi.datatypes.generated.Bytes32.class,
+                        org.tpc.abi.Utils.typeMap(proposalNames, org.tpc.abi.datatypes.generated.Bytes32.class))));
         return deployRemoteCall(Ballot.class, web3j, credentials, gasPrice, gasLimit, BINARY, encodedConstructor);
     }
 
     @Deprecated
     public static RemoteCall<Ballot> deploy(Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit, List<byte[]> proposalNames) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.generated.Bytes32>(
-                        org.web3j.abi.datatypes.generated.Bytes32.class,
-                        org.web3j.abi.Utils.typeMap(proposalNames, org.web3j.abi.datatypes.generated.Bytes32.class))));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.DynamicArray<org.tpc.abi.datatypes.generated.Bytes32>(
+                        org.tpc.abi.datatypes.generated.Bytes32.class,
+                        org.tpc.abi.Utils.typeMap(proposalNames, org.tpc.abi.datatypes.generated.Bytes32.class))));
         return deployRemoteCall(Ballot.class, web3j, transactionManager, gasPrice, gasLimit, BINARY, encodedConstructor);
     }
 }
