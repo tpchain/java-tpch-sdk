@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,15 +22,15 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
-import org.web3j.abi.datatypes.Address;
-import org.web3j.protocol.ObjectMapperFactory;
-import org.web3j.protocol.core.methods.response.AbiDefinition;
-import org.web3j.tx.Contract;
-import org.web3j.utils.Files;
-import org.web3j.utils.Strings;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.protocol.ObjectMapperFactory;
+import org.tpc.protocol.core.methods.response.AbiDefinition;
+import org.tpc.tx.Contract;
+import org.tpc.utils.Files;
+import org.tpc.utils.Strings;
 
-import static org.web3j.codegen.Console.exitError;
-import static org.web3j.utils.Collection.tail;
+import static org.tpc.codegen.Console.exitError;
+import static org.tpc.utils.Collection.tail;
 import static picocli.CommandLine.Help.Visibility.ALWAYS;
 
 /** Java wrapper source code generator for Solidity ABI format. */
