@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -29,18 +29,18 @@ import javax.tools.ToolProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.TempFileProvider;
-import org.web3j.utils.Strings;
+import org.tpc.TempFileProvider;
+import org.tpc.utils.Strings;
 
 import static java.util.Collections.emptyList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.codegen.FunctionWrapperGenerator.JAVA_TYPES_ARG;
-import static org.web3j.codegen.FunctionWrapperGenerator.PRIMITIVE_TYPES_ARG;
-import static org.web3j.codegen.FunctionWrapperGenerator.SOLIDITY_TYPES_ARG;
-import static org.web3j.codegen.SolidityFunctionWrapperGenerator.COMMAND_GENERATE;
-import static org.web3j.codegen.SolidityFunctionWrapperGenerator.COMMAND_SOLIDITY;
-import static org.web3j.codegen.SolidityFunctionWrapperGenerator.getFileNameNoExtension;
+import static org.tpc.codegen.FunctionWrapperGenerator.JAVA_TYPES_ARG;
+import static org.tpc.codegen.FunctionWrapperGenerator.PRIMITIVE_TYPES_ARG;
+import static org.tpc.codegen.FunctionWrapperGenerator.SOLIDITY_TYPES_ARG;
+import static org.tpc.codegen.SolidityFunctionWrapperGenerator.COMMAND_GENERATE;
+import static org.tpc.codegen.SolidityFunctionWrapperGenerator.COMMAND_SOLIDITY;
+import static org.tpc.codegen.SolidityFunctionWrapperGenerator.getFileNameNoExtension;
 
 public class SolidityFunctionWrapperGeneratorTest extends TempFileProvider {
 
@@ -200,9 +200,9 @@ public class SolidityFunctionWrapperGeneratorTest extends TempFileProvider {
             throws Exception {
         String packageName = null;
         if (types.equals(JAVA_TYPES_ARG)) {
-            packageName = "org.web3j.unittests.java";
+            packageName = "org.tpc.unittests.java";
         } else if (types.equals(SOLIDITY_TYPES_ARG)) {
-            packageName = "org.web3j.unittests.solidity";
+            packageName = "org.tpc.unittests.solidity";
         }
 
         List<String> options = new ArrayList<>();
