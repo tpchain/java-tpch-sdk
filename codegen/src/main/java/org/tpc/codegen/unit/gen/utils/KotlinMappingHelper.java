@@ -10,15 +10,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.utils;
+package org.tpc.codegen.unit.gen.utils;
 
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.web3j.tuples.Tuple;
-import org.web3j.tuples.generated.Tuple2;
+import org.tpc.tuples.Tuple;
+import org.tpc.tuples.generated.Tuple2;
 
 public class KotlinMappingHelper implements MappingHelper {
     private Map<Class, Object> defaultValueMapKotlin = new HashMap<>();
