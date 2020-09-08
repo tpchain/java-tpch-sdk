@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol;
+package org.tpc.protocol;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.BeanDescription;
@@ -22,8 +22,8 @@ import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.deser.BeanDeserializerModifier;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
-import org.web3j.protocol.core.Response;
-import org.web3j.protocol.deserializer.RawResponseDeserializer;
+import org.tpc.protocol.core.Response;
+import org.tpc.protocol.deserializer.RawResponseDeserializer;
 
 /** Factory for managing our ObjectMapper instances. */
 public class ObjectMapperFactory {
