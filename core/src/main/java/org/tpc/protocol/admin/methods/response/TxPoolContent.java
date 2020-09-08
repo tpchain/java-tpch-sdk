@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.admin.methods.response;
+package org.tpc.protocol.admin.methods.response;
 
 import java.math.BigInteger;
 import java.util.Collection;
@@ -21,8 +21,8 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import org.web3j.protocol.core.Response;
-import org.web3j.protocol.core.methods.response.Transaction;
+import org.tpc.protocol.core.Response;
+import org.tpc.protocol.core.methods.response.Transaction;
 
 /** txpool_content */
 public final class TxPoolContent extends Response<TxPoolContent.TxPoolContentResult> {
