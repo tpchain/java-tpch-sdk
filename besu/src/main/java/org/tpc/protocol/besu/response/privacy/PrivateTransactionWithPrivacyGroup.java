@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.besu.response.privacy;
+package org.tpc.protocol.besu.response.privacy;
 
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import org.web3j.utils.Base64String;
+import org.tpc.utils.Base64String;
 
 @JsonDeserialize(using = JsonDeserializer.None.class)
 public class PrivateTransactionWithPrivacyGroup extends PrivateTransaction {
