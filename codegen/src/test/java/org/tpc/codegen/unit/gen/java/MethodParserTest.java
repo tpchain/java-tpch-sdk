@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen.unit.gen.java;
+package org.tpc.codegen.unit.gen.java;
 
 import java.lang.reflect.Method;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class MethodParserTest extends Setup {
                 new MethodParser(deployMethod.get(), greeterContractClass).getMethodSpec();
         assertEquals(
                 "@org.junit.jupiter.api.BeforeAll\n"
-                        + "static void deploy(org.web3j.protocol.Web3j web3j, org.web3j.tx.TransactionManager transactionManager, org.web3j.tx.gas.ContractGasProvider contractGasProvider) throws java.lang.Exception {\n"
+                        + "static void deploy(org.tpc.protocol.Web3j web3j, org.tpc.tx.TransactionManager transactionManager, org.tpc.tx.gas.ContractGasProvider contractGasProvider) throws java.lang.Exception {\n"
                         + "  greeter = org.com.test.contract.Greeter.deploy(web3j, transactionManager, contractGasProvider, \"REPLACE_ME\").send();\n"
                         + "}\n",
                 deployMethodSpec.toString());
@@ -44,7 +44,7 @@ public class MethodParserTest extends Setup {
         MethodSpec deployMethodSpec =
                 new MethodParser(deployMethod.get(), greeterContractClass).getMethodSpec();
         assertEquals(
-                "org.web3j.protocol.core.methods.response.TransactionReceipt transactionReceiptVar = greeter.newGreeting(\"REPLACE_ME\").send();\n"
+                "org.tpc.protocol.core.methods.response.TransactionReceipt transactionReceiptVar = greeter.newGreeting(\"REPLACE_ME\").send();\n"
                         + "org.junit.jupiter.api.Assertions.assertTrue(transactionReceiptVar.isStatusOK());\n",
                 deployMethodSpec.code.toString());
     }
