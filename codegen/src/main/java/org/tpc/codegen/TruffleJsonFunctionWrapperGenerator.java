@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,14 +32,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.web3j.abi.datatypes.Address;
-import org.web3j.protocol.ObjectMapperFactory;
-import org.web3j.protocol.core.methods.response.AbiDefinition;
-import org.web3j.tx.ChainId;
-import org.web3j.utils.Strings;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.protocol.ObjectMapperFactory;
+import org.tpc.protocol.core.methods.response.AbiDefinition;
+import org.tpc.tx.ChainId;
+import org.tpc.utils.Strings;
 
-import static org.web3j.codegen.Console.exitError;
-import static org.web3j.utils.Collection.tail;
+import static org.tpc.codegen.Console.exitError;
+import static org.tpc.utils.Collection.tail;
 
 /**
  * Java wrapper source code generator for Truffle JSON format. Truffle embeds the Solidity ABI
