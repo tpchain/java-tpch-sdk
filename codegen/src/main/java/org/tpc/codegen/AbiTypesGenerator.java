@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.codegen;
+package org.tpc.codegen;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -26,11 +26,11 @@ import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeSpec;
 import com.squareup.javapoet.TypeVariableName;
 
-import org.web3j.abi.datatypes.Bytes;
-import org.web3j.abi.datatypes.Int;
-import org.web3j.abi.datatypes.StaticArray;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Uint;
+import org.tpc.abi.datatypes.Bytes;
+import org.tpc.abi.datatypes.Int;
+import org.tpc.abi.datatypes.StaticArray;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Uint;
 
 /** Generator class for creating all the different numeric type variants. */
 public class AbiTypesGenerator extends Generator {
