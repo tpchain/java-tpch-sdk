@@ -10,11 +10,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.spi;
+package org.tpc.abi.spi;
 
 import java.util.function.Supplier;
 
-import org.web3j.abi.FunctionReturnDecoder;
+import org.tpc.abi.FunctionReturnDecoder;
 
 /** Function decoding Service Provider Interface. */
 public interface FunctionReturnDecoderProvider extends Supplier<FunctionReturnDecoder> {}
