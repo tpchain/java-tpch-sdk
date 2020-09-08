@@ -1,4 +1,4 @@
-package org.web3j.contracts.eip721.generated;
+package org.tpc.contracts.eip721.generated;
 
 import io.reactivex.Flowable;
 import java.math.BigInteger;
@@ -6,30 +6,30 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.web3j.abi.EventEncoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.Bool;
-import org.web3j.abi.datatypes.Event;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.generated.Uint256;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.RemoteCall;
-import org.web3j.protocol.core.methods.request.EthFilter;
-import org.web3j.protocol.core.methods.response.Log;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.tx.Contract;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
+import org.tpc.abi.EventEncoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.abi.datatypes.Bool;
+import org.tpc.abi.datatypes.Event;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.generated.Uint256;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.RemoteCall;
+import org.tpc.protocol.core.methods.request.EthFilter;
+import org.tpc.protocol.core.methods.response.Log;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.tx.Contract;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
 
 /**
  * <p>Auto generated code.
  * <p><strong>Do not modify!</strong>
  * <p>Please use the <a href="https://docs.web3j.io/command_line.html">web3j command line tools</a>,
- * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
+ * or the org.tpc.codegen.SolidityFunctionWrapperGenerator in the
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
  * <p>Generated with web3j version 4.1.1.
@@ -85,7 +85,7 @@ public class ERC721 extends Contract {
 
     public RemoteCall<String> getApproved(BigInteger _tokenId) {
         final Function function = new Function(FUNC_GETAPPROVED, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(_tokenId)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Uint256(_tokenId)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
@@ -93,8 +93,8 @@ public class ERC721 extends Contract {
     public RemoteCall<TransactionReceipt> approve(String _approved, BigInteger _tokenId, BigInteger weiValue) {
         final Function function = new Function(
                 FUNC_APPROVE, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_approved), 
-                new org.web3j.abi.datatypes.generated.Uint256(_tokenId)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_approved),
+                new org.tpc.abi.datatypes.generated.Uint256(_tokenId)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function, weiValue);
     }
@@ -102,9 +102,9 @@ public class ERC721 extends Contract {
     public RemoteCall<TransactionReceipt> transferFrom(String _from, String _to, BigInteger _tokenId, BigInteger weiValue) {
         final Function function = new Function(
                 FUNC_TRANSFERFROM, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_from), 
-                new org.web3j.abi.datatypes.Address(_to), 
-                new org.web3j.abi.datatypes.generated.Uint256(_tokenId)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_from),
+                new org.tpc.abi.datatypes.Address(_to),
+                new org.tpc.abi.datatypes.generated.Uint256(_tokenId)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function, weiValue);
     }
@@ -112,23 +112,23 @@ public class ERC721 extends Contract {
     public RemoteCall<TransactionReceipt> safeTransferFrom(String _from, String _to, BigInteger _tokenId, BigInteger weiValue) {
         final Function function = new Function(
                 FUNC_SAFETRANSFERFROM, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_from), 
-                new org.web3j.abi.datatypes.Address(_to), 
-                new org.web3j.abi.datatypes.generated.Uint256(_tokenId)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_from),
+                new org.tpc.abi.datatypes.Address(_to),
+                new org.tpc.abi.datatypes.generated.Uint256(_tokenId)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function, weiValue);
     }
 
     public RemoteCall<String> ownerOf(BigInteger _tokenId) {
         final Function function = new Function(FUNC_OWNEROF, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Uint256(_tokenId)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Uint256(_tokenId)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteCall<BigInteger> balanceOf(String _owner) {
         final Function function = new Function(FUNC_BALANCEOF, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_owner)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_owner)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
@@ -136,8 +136,8 @@ public class ERC721 extends Contract {
     public RemoteCall<TransactionReceipt> setApprovalForAll(String _operator, Boolean _approved) {
         final Function function = new Function(
                 FUNC_SETAPPROVALFORALL, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_operator), 
-                new org.web3j.abi.datatypes.Bool(_approved)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_operator),
+                new org.tpc.abi.datatypes.Bool(_approved)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
@@ -145,18 +145,18 @@ public class ERC721 extends Contract {
     public RemoteCall<TransactionReceipt> safeTransferFrom(String _from, String _to, BigInteger _tokenId, byte[] data, BigInteger weiValue) {
         final Function function = new Function(
                 FUNC_SAFETRANSFERFROM, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_from), 
-                new org.web3j.abi.datatypes.Address(_to), 
-                new org.web3j.abi.datatypes.generated.Uint256(_tokenId), 
-                new org.web3j.abi.datatypes.DynamicBytes(data)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_from),
+                new org.tpc.abi.datatypes.Address(_to),
+                new org.tpc.abi.datatypes.generated.Uint256(_tokenId),
+                new org.tpc.abi.datatypes.DynamicBytes(data)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function, weiValue);
     }
 
     public RemoteCall<Boolean> isApprovedForAll(String _owner, String _operator) {
         final Function function = new Function(FUNC_ISAPPROVEDFORALL, 
-                Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(_owner), 
-                new org.web3j.abi.datatypes.Address(_operator)), 
+                Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(_owner),
+                new org.tpc.abi.datatypes.Address(_operator)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Bool>() {}));
         return executeRemoteCallSingleValueReturn(function, Boolean.class);
     }
