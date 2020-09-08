@@ -10,12 +10,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.abi.datatypes.primitive;
+package org.tpc.abi.datatypes.primitive;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-import org.web3j.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Type;
 
 public abstract class PrimitiveType<T extends Serializable & Comparable<T>> implements Type<T> {
 
