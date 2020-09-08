@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.besu;
+package org.tpc.protocol.besu;
 
 import java.util.concurrent.ScheduledExecutorService;
 
@@ -18,8 +18,8 @@ import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.FlowableEmitter;
 
-import org.web3j.protocol.besu.filters.PrivateLogFilter;
-import org.web3j.protocol.core.methods.response.Log;
+import org.tpc.protocol.besu.filters.PrivateLogFilter;
+import org.tpc.protocol.core.methods.response.Log;
 
 public class JsonRpc2_0BesuRx {
 
@@ -33,7 +33,7 @@ public class JsonRpc2_0BesuRx {
 
     public Flowable<Log> privLogFlowable(
             String privacyGroupId,
-            org.web3j.protocol.core.methods.request.EthFilter ethFilter,
+            org.tpc.protocol.core.methods.request.EthFilter ethFilter,
             long pollingInterval) {
         return Flowable.create(
                 subscriber -> {
@@ -47,7 +47,7 @@ public class JsonRpc2_0BesuRx {
     }
 
     private <T> void run(
-            org.web3j.protocol.core.filters.Filter<T> filter,
+            org.tpc.protocol.core.filters.Filter<T> filter,
             FlowableEmitter<? super T> emitter,
             long pollingInterval) {
 
