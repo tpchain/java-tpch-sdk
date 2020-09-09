@@ -10,12 +10,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.geth;
+package org.tpc.protocol.geth;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.RequestTester;
-import org.web3j.protocol.http.HttpService;
+import org.tpc.protocol.RequestTester;
+import org.tpc.protocol.http.HttpService;
 
 public class RequestTest extends RequestTester {
     private Geth web3j;
