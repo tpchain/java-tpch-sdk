@@ -10,15 +10,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.eea;
+package org.tpc.protocol.eea;
 
 import java.util.Collections;
 import java.util.concurrent.ScheduledExecutorService;
 
-import org.web3j.protocol.Web3jService;
-import org.web3j.protocol.core.JsonRpc2_0Web3j;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.EthSendTransaction;
+import org.tpc.protocol.Web3jService;
+import org.tpc.protocol.core.JsonRpc2_0Web3j;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.EthSendTransaction;
 
 public class JsonRpc2_0Eea extends JsonRpc2_0Web3j implements Eea {
     public JsonRpc2_0Eea(Web3jService web3jService) {
