@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.ens;
+package org.tpc.ens;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -18,17 +18,17 @@ import java.math.BigInteger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.abi.TypeEncoder;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.Web3jService;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.EthBlock;
-import org.web3j.protocol.core.methods.response.EthCall;
-import org.web3j.protocol.core.methods.response.EthSyncing;
-import org.web3j.protocol.core.methods.response.NetVersion;
-import org.web3j.tx.ChainIdLong;
-import org.web3j.utils.Numeric;
+import org.tpc.abi.TypeEncoder;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.Web3jService;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.EthBlock;
+import org.tpc.protocol.core.methods.response.EthCall;
+import org.tpc.protocol.core.methods.response.EthSyncing;
+import org.tpc.protocol.core.methods.response.NetVersion;
+import org.tpc.tx.ChainIdLong;
+import org.tpc.utils.Numeric;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -37,8 +37,8 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-import static org.web3j.ens.EnsResolver.DEFAULT_SYNC_THRESHOLD;
-import static org.web3j.ens.EnsResolver.isValidEnsName;
+import static org.tpc.ens.EnsResolver.DEFAULT_SYNC_THRESHOLD;
+import static org.tpc.ens.EnsResolver.isValidEnsName;
 
 public class EnsResolverTest {
 
@@ -79,7 +79,7 @@ public class EnsResolverTest {
                 .thenReturn(contractAddressResponse);
 
         assertEquals(
-                ensResolver.resolve("web3j.eth"), ("0x19e03255f667bdfd50a32722df860b1eeaf4d635"));
+                ensResolver.resolve("tpc.eth"), ("0x19e03255f667bdfd50a32722df860b1eeaf4d635"));
     }
 
     @Test
@@ -94,7 +94,7 @@ public class EnsResolverTest {
                 "0x0000000000000000000000004c641fb9bad9b60ef180c31f56051ce826d21a9a";
         String contractName =
                 "0x0000000000000000000000000000000000000000000000000000000000000020"
-                        + TypeEncoder.encode(new Utf8String("web3j.eth"));
+                        + TypeEncoder.encode(new Utf8String("tpc.eth"));
         System.err.println(contractName);
 
         EthCall resolverAddressResponse = new EthCall();
@@ -111,7 +111,7 @@ public class EnsResolverTest {
 
         assertEquals(
                 ensResolver.reverseResolve("0x19e03255f667bdfd50a32722df860b1eeaf4d635"),
-                ("web3j.eth"));
+                ("tpc.eth"));
     }
 
     @Test
