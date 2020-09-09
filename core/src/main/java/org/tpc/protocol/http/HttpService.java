@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.http;
+package org.tpc.protocol.http;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -33,8 +33,8 @@ import okio.BufferedSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.web3j.protocol.Service;
-import org.web3j.protocol.exceptions.ClientConnectionException;
+import org.tpc.protocol.Service;
+import org.tpc.protocol.exceptions.ClientConnectionException;
 
 import static okhttp3.ConnectionSpec.CLEARTEXT;
 
