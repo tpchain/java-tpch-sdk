@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.crypto;
+package org.tpc.crypto;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -20,18 +20,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.utils.Numeric;
+import org.tpc.utils.Numeric;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.crypto.Hash.sha256;
-import static org.web3j.crypto.SampleKeys.CREDENTIALS;
-import static org.web3j.crypto.SampleKeys.KEY_PAIR;
-import static org.web3j.crypto.SampleKeys.MNEMONIC;
-import static org.web3j.crypto.SampleKeys.PASSWORD;
-import static org.web3j.crypto.WalletUtils.isValidAddress;
-import static org.web3j.crypto.WalletUtils.isValidPrivateKey;
+import static org.tpc.crypto.Hash.sha256;
+import static org.tpc.crypto.SampleKeys.CREDENTIALS;
+import static org.tpc.crypto.SampleKeys.KEY_PAIR;
+import static org.tpc.crypto.SampleKeys.MNEMONIC;
+import static org.tpc.crypto.SampleKeys.PASSWORD;
+import static org.tpc.crypto.WalletUtils.isValidAddress;
+import static org.tpc.crypto.WalletUtils.isValidPrivateKey;
 
 public class WalletUtilsTest {
 
