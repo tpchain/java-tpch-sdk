@@ -10,18 +10,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.crypto;
+package org.tpc.crypto;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.web3j.rlp.RlpEncoder;
-import org.web3j.rlp.RlpList;
-import org.web3j.rlp.RlpString;
-import org.web3j.rlp.RlpType;
-import org.web3j.utils.Numeric;
+import org.tpc.rlp.RlpEncoder;
+import org.tpc.rlp.RlpList;
+import org.tpc.rlp.RlpString;
+import org.tpc.rlp.RlpType;
+import org.tpc.utils.Numeric;
 
 /** Smart Contract utility functions. */
 public class ContractUtils {
