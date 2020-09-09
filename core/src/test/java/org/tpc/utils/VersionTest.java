@@ -10,16 +10,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.utils;
+package org.tpc.utils;
 
 import java.io.IOException;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.web3j.utils.Version.DEFAULT;
-import static org.web3j.utils.Version.getTimestamp;
-import static org.web3j.utils.Version.getVersion;
+import static org.tpc.utils.Version.DEFAULT;
+import static org.tpc.utils.Version.getTimestamp;
+import static org.tpc.utils.Version.getVersion;
 
 public class VersionTest {
 
