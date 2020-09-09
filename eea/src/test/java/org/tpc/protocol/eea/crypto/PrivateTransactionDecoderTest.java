@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.eea.crypto;
+package org.tpc.protocol.eea.crypto;
 
 import java.math.BigInteger;
 import java.util.Collections;
@@ -18,16 +18,16 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.crypto.Credentials;
-import org.web3j.crypto.Sign;
-import org.web3j.utils.Base64String;
-import org.web3j.utils.Numeric;
+import org.tpc.crypto.Credentials;
+import org.tpc.crypto.Sign;
+import org.tpc.utils.Base64String;
+import org.tpc.utils.Numeric;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.utils.Restriction.RESTRICTED;
+import static org.tpc.utils.Restriction.RESTRICTED;
 
 public class PrivateTransactionDecoderTest {
 
