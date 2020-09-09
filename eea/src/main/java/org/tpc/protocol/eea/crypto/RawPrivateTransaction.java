@@ -10,15 +10,15 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.eea.crypto;
+package org.tpc.protocol.eea.crypto;
 
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Optional;
 
-import org.web3j.crypto.RawTransaction;
-import org.web3j.utils.Base64String;
-import org.web3j.utils.Restriction;
+import org.tpc.crypto.RawTransaction;
+import org.tpc.utils.Base64String;
+import org.tpc.utils.Restriction;
 
 /**
  * Transaction class used for signing transactions locally.<br>
