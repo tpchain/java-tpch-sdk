@@ -10,18 +10,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.crypto;
+package org.tpc.crypto;
 
 import java.nio.ByteBuffer;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.utils.Numeric;
+import org.tpc.utils.Numeric;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.web3j.crypto.Bip32ECKeyPair.HARDENED_BIT;
-import static org.web3j.crypto.Hash.sha256;
+import static org.tpc.crypto.Bip32ECKeyPair.HARDENED_BIT;
+import static org.tpc.crypto.Hash.sha256;
 
 /**
  * BIP-32 implementation test.
