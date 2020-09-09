@@ -10,17 +10,17 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx;
+package org.tpc.tx;
 
 import java.io.IOException;
 import java.math.BigDecimal;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.crypto.SampleKeys;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.tx.exceptions.TxHashMismatchException;
-import org.web3j.utils.Convert;
+import org.tpc.crypto.SampleKeys;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.tx.exceptions.TxHashMismatchException;
+import org.tpc.utils.Convert;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
