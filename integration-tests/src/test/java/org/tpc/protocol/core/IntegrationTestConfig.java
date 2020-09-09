@@ -10,11 +10,11 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import java.math.BigInteger;
 
-import org.web3j.protocol.core.methods.request.Transaction;
+import org.tpc.protocol.core.methods.request.Transaction;
 
 /** Common values used by integration tests. */
 public interface IntegrationTestConfig {
