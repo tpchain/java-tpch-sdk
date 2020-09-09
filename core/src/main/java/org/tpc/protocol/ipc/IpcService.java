@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.ipc;
+package org.tpc.protocol.ipc;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import java.io.InputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.web3j.protocol.Service;
+import org.tpc.protocol.Service;
 
 /** Ipc service implementation. */
 public class IpcService extends Service {
