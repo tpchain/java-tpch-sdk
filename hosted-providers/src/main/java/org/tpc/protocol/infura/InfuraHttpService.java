@@ -10,12 +10,12 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.infura;
+package org.tpc.protocol.infura;
 
 import java.util.Collections;
 import java.util.Map;
 
-import org.web3j.protocol.http.HttpService;
+import org.tpc.protocol.http.HttpService;
 
 /** HttpService for working with <a href="https://infura.io/">Infura</a> clients. */
 public class InfuraHttpService extends HttpService {
