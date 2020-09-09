@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol;
+package org.tpc.protocol;
 
 import java.io.IOException;
 
@@ -20,12 +20,12 @@ import okhttp3.Protocol;
 import okhttp3.ResponseBody;
 import org.junit.jupiter.api.BeforeEach;
 
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.Response;
-import org.web3j.protocol.http.HttpService;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.Response;
+import org.tpc.protocol.http.HttpService;
 
 import static org.junit.jupiter.api.Assertions.fail;
-import static org.web3j.protocol.http.HttpService.JSON_MEDIA_TYPE;
+import static org.tpc.protocol.http.HttpService.JSON_MEDIA_TYPE;
 
 /** Protocol Response tests. */
 public abstract class ResponseTester {
