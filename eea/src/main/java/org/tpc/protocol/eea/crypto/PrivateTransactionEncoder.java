@@ -10,20 +10,20 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.eea.crypto;
+package org.tpc.protocol.eea.crypto;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.web3j.crypto.Credentials;
-import org.web3j.crypto.Sign;
-import org.web3j.crypto.TransactionEncoder;
-import org.web3j.rlp.RlpEncoder;
-import org.web3j.rlp.RlpList;
-import org.web3j.rlp.RlpString;
-import org.web3j.rlp.RlpType;
-import org.web3j.utils.Base64String;
+import org.tpc.crypto.Credentials;
+import org.tpc.crypto.Sign;
+import org.tpc.crypto.TransactionEncoder;
+import org.tpc.rlp.RlpEncoder;
+import org.tpc.rlp.RlpList;
+import org.tpc.rlp.RlpString;
+import org.tpc.rlp.RlpType;
+import org.tpc.utils.Base64String;
 
 /** Create signed RLP encoded private transaction. */
 public class PrivateTransactionEncoder {
