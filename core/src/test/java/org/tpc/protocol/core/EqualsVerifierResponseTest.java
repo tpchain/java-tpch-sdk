@@ -10,21 +10,21 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import nl.jqno.equalsverifier.EqualsVerifier;
 import nl.jqno.equalsverifier.Warning;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.core.methods.response.AbiDefinition;
-import org.web3j.protocol.core.methods.response.EthBlock;
-import org.web3j.protocol.core.methods.response.EthCompileSolidity;
-import org.web3j.protocol.core.methods.response.EthLog;
-import org.web3j.protocol.core.methods.response.EthSyncing;
-import org.web3j.protocol.core.methods.response.Log;
-import org.web3j.protocol.core.methods.response.ShhMessages;
-import org.web3j.protocol.core.methods.response.Transaction;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.protocol.core.methods.response.AbiDefinition;
+import org.tpc.protocol.core.methods.response.EthBlock;
+import org.tpc.protocol.core.methods.response.EthCompileSolidity;
+import org.tpc.protocol.core.methods.response.EthLog;
+import org.tpc.protocol.core.methods.response.EthSyncing;
+import org.tpc.protocol.core.methods.response.Log;
+import org.tpc.protocol.core.methods.response.ShhMessages;
+import org.tpc.protocol.core.methods.response.Transaction;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
 
 public class EqualsVerifierResponseTest {
 
