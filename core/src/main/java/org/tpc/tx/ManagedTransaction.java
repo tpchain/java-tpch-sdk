@@ -10,23 +10,23 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx;
+package org.tpc.tx;
 
 import java.io.IOException;
 import java.math.BigInteger;
 
-import org.web3j.ens.EnsResolver;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.methods.response.EthGasPrice;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.exceptions.TransactionException;
+import org.tpc.ens.EnsResolver;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.methods.response.EthGasPrice;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.protocol.exceptions.TransactionException;
 
 /** Generic transaction manager. */
 public abstract class ManagedTransaction {
 
     /**
-     * @see org.web3j.tx.gas.DefaultGasProvider
+     * @see org.tpc.tx.gas.DefaultGasProvider
      * @deprecated use ContractGasProvider
      */
     public static final BigInteger GAS_PRICE = BigInteger.valueOf(22_000_000_000L);
