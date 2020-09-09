@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.deserializer;
+package org.tpc.protocol.deserializer;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.deser.ResolvableDeserializer;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 
-import org.web3j.protocol.core.Response;
+import org.tpc.protocol.core.Response;
 
 /** A jackson deserializer that sets the rawResponse variable of Response objects. */
 public class RawResponseDeserializer extends StdDeserializer<Response>
