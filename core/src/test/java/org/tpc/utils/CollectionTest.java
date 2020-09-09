@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.utils;
+package org.tpc.utils;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,10 +19,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.web3j.utils.Collection.EMPTY_STRING_ARRAY;
-import static org.web3j.utils.Collection.create;
-import static org.web3j.utils.Collection.join;
-import static org.web3j.utils.Collection.tail;
+import static org.tpc.utils.Collection.EMPTY_STRING_ARRAY;
+import static org.tpc.utils.Collection.create;
+import static org.tpc.utils.Collection.join;
+import static org.tpc.utils.Collection.tail;
 
 public class CollectionTest {
 
