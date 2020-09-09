@@ -10,9 +10,9 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.geth.response;
+package org.tpc.protocol.geth.response;
 
-import org.web3j.protocol.core.Response;
+import org.tpc.protocol.core.Response;
 
 /** personal_importRawKey. */
 public class PersonalImportRawKey extends Response<String> {
