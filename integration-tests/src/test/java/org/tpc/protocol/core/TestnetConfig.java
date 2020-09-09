@@ -10,16 +10,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import java.math.BigInteger;
 import java.util.Arrays;
 
-import org.web3j.abi.EventEncoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Event;
-import org.web3j.abi.datatypes.Uint;
-import org.web3j.protocol.core.methods.request.Transaction;
+import org.tpc.abi.EventEncoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Event;
+import org.tpc.abi.datatypes.Uint;
+import org.tpc.protocol.core.methods.request.Transaction;
 
 /** Mordon Testnet Configuration. */
 public class TestnetConfig implements IntegrationTestConfig {
