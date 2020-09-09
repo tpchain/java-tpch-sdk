@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.crypto;
+package org.tpc.crypto;
 
 import java.io.File;
 
@@ -19,11 +19,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.web3j.crypto.Bip32Test.addChecksum;
-import static org.web3j.crypto.Bip32Test.serializePrivate;
-import static org.web3j.crypto.Bip32Test.serializePublic;
-import static org.web3j.crypto.SampleKeys.PASSWORD;
-import static org.web3j.crypto.WalletUtilsTest.createTempDir;
+import static org.tpc.crypto.Bip32Test.addChecksum;
+import static org.tpc.crypto.Bip32Test.serializePrivate;
+import static org.tpc.crypto.Bip32Test.serializePublic;
+import static org.tpc.crypto.SampleKeys.PASSWORD;
+import static org.tpc.crypto.WalletUtilsTest.createTempDir;
 
 public class Bip44WalletUtilsTest {
 
