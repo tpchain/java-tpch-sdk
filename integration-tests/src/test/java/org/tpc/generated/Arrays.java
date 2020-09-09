@@ -1,28 +1,28 @@
-package org.web3j.generated;
+package org.tpc.generated;
 
 import java.math.BigInteger;
 import java.util.List;
 import java.util.concurrent.Callable;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.DynamicArray;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.generated.StaticArray10;
-import org.web3j.abi.datatypes.generated.Uint256;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.RemoteCall;
-import org.web3j.protocol.core.RemoteFunctionCall;
-import org.web3j.tx.Contract;
-import org.web3j.tx.TransactionManager;
-import org.web3j.tx.gas.ContractGasProvider;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.abi.datatypes.DynamicArray;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.generated.StaticArray10;
+import org.tpc.abi.datatypes.generated.Uint256;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.RemoteCall;
+import org.tpc.protocol.core.RemoteFunctionCall;
+import org.tpc.tx.Contract;
+import org.tpc.tx.TransactionManager;
+import org.tpc.tx.gas.ContractGasProvider;
 
 /**
  * <p>Auto generated code.
  * <p><strong>Do not modify!</strong>
  * <p>Please use the <a href="https://docs.web3j.io/command_line.html">web3j command line tools</a>,
- * or the org.web3j.codegen.SolidityFunctionWrapperGenerator in the 
+ * or the org.tpc.codegen.SolidityFunctionWrapperGenerator in the
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  *
  * <p>Generated with web3j version 4.5.16.
@@ -61,10 +61,10 @@ public class Arrays extends Contract {
 
     public RemoteFunctionCall<List> multiDynamic(List<List<BigInteger>> input) {
         final Function function = new Function(FUNC_MULTIDYNAMIC, 
-                java.util.Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.generated.StaticArray2>(
-                        org.web3j.abi.datatypes.generated.StaticArray2.class,
-                        org.web3j.abi.Utils.typeMap(input, org.web3j.abi.datatypes.generated.StaticArray2.class,
-                org.web3j.abi.datatypes.generated.Uint256.class))), 
+                java.util.Arrays.<Type>asList(new org.tpc.abi.datatypes.DynamicArray<org.tpc.abi.datatypes.generated.StaticArray2>(
+                        org.tpc.abi.datatypes.generated.StaticArray2.class,
+                        org.tpc.abi.Utils.typeMap(input, org.tpc.abi.datatypes.generated.StaticArray2.class,
+                org.tpc.abi.datatypes.generated.Uint256.class))),
                 java.util.Arrays.<TypeReference<?>>asList(new TypeReference<DynamicArray<Uint256>>() {}));
         return new RemoteFunctionCall<List>(function,
                 new Callable<List>() {
@@ -94,10 +94,10 @@ public class Arrays extends Contract {
 
     public RemoteFunctionCall<List> multiFixed(List<List<BigInteger>> input) {
         final Function function = new Function(FUNC_MULTIFIXED, 
-                java.util.Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.StaticArray6<org.web3j.abi.datatypes.generated.StaticArray2>(
-                        org.web3j.abi.datatypes.generated.StaticArray2.class,
-                        org.web3j.abi.Utils.typeMap(input, org.web3j.abi.datatypes.generated.StaticArray2.class,
-                org.web3j.abi.datatypes.generated.Uint256.class))), 
+                java.util.Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.StaticArray6<org.tpc.abi.datatypes.generated.StaticArray2>(
+                        org.tpc.abi.datatypes.generated.StaticArray2.class,
+                        org.tpc.abi.Utils.typeMap(input, org.tpc.abi.datatypes.generated.StaticArray2.class,
+                org.tpc.abi.datatypes.generated.Uint256.class))),
                 java.util.Arrays.<TypeReference<?>>asList(new TypeReference<DynamicArray<Uint256>>() {}));
         return new RemoteFunctionCall<List>(function,
                 new Callable<List>() {
@@ -112,9 +112,9 @@ public class Arrays extends Contract {
 
     public RemoteFunctionCall<List> fixedReverse(List<BigInteger> input) {
         final Function function = new Function(FUNC_FIXEDREVERSE, 
-                java.util.Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.StaticArray10<org.web3j.abi.datatypes.generated.Uint256>(
-                        org.web3j.abi.datatypes.generated.Uint256.class,
-                        org.web3j.abi.Utils.typeMap(input, org.web3j.abi.datatypes.generated.Uint256.class))), 
+                java.util.Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.StaticArray10<org.tpc.abi.datatypes.generated.Uint256>(
+                        org.tpc.abi.datatypes.generated.Uint256.class,
+                        org.tpc.abi.Utils.typeMap(input, org.tpc.abi.datatypes.generated.Uint256.class))),
                 java.util.Arrays.<TypeReference<?>>asList(new TypeReference<StaticArray10<Uint256>>() {}));
         return new RemoteFunctionCall<List>(function,
                 new Callable<List>() {
@@ -129,9 +129,9 @@ public class Arrays extends Contract {
 
     public RemoteFunctionCall<List> dynamicReverse(List<BigInteger> input) {
         final Function function = new Function(FUNC_DYNAMICREVERSE, 
-                java.util.Arrays.<Type>asList(new org.web3j.abi.datatypes.DynamicArray<org.web3j.abi.datatypes.generated.Uint256>(
-                        org.web3j.abi.datatypes.generated.Uint256.class,
-                        org.web3j.abi.Utils.typeMap(input, org.web3j.abi.datatypes.generated.Uint256.class))), 
+                java.util.Arrays.<Type>asList(new org.tpc.abi.datatypes.DynamicArray<org.tpc.abi.datatypes.generated.Uint256>(
+                        org.tpc.abi.datatypes.generated.Uint256.class,
+                        org.tpc.abi.Utils.typeMap(input, org.tpc.abi.datatypes.generated.Uint256.class))),
                 java.util.Arrays.<TypeReference<?>>asList(new TypeReference<DynamicArray<Uint256>>() {}));
         return new RemoteFunctionCall<List>(function,
                 new Callable<List>() {
