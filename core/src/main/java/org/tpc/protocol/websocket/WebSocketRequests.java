@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.websocket;
+package org.tpc.protocol.websocket;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import org.web3j.protocol.core.BatchResponse;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.Response;
+import org.tpc.protocol.core.BatchResponse;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.Response;
 
 /** */
 public class WebSocketRequests extends WebSocketRequest<BatchResponse> {
