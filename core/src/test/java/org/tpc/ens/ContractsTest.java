@@ -10,18 +10,18 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.ens;
+package org.tpc.ens;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.tx.ChainId;
+import org.tpc.tx.ChainId;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.web3j.ens.Contracts.MAINNET;
-import static org.web3j.ens.Contracts.RINKEBY;
-import static org.web3j.ens.Contracts.ROPSTEN;
-import static org.web3j.ens.Contracts.resolveRegistryContract;
+import static org.tpc.ens.Contracts.MAINNET;
+import static org.tpc.ens.Contracts.RINKEBY;
+import static org.tpc.ens.Contracts.ROPSTEN;
+import static org.tpc.ens.Contracts.resolveRegistryContract;
 
 @SuppressWarnings("deprecation")
 public class ContractsTest {
