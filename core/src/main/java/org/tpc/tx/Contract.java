@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx;
+package org.tpc.tx;
 
 import java.io.IOException;
 import java.lang.reflect.Constructor;
@@ -23,32 +23,32 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.web3j.abi.EventEncoder;
-import org.web3j.abi.EventValues;
-import org.web3j.abi.FunctionEncoder;
-import org.web3j.abi.FunctionReturnDecoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Address;
-import org.web3j.abi.datatypes.Event;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.crypto.Credentials;
-import org.web3j.ens.EnsResolver;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.RemoteCall;
-import org.web3j.protocol.core.RemoteFunctionCall;
-import org.web3j.protocol.core.methods.response.EthGetCode;
-import org.web3j.protocol.core.methods.response.Log;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.exceptions.TransactionException;
-import org.web3j.tx.exceptions.ContractCallException;
-import org.web3j.tx.gas.ContractGasProvider;
-import org.web3j.tx.gas.StaticGasProvider;
-import org.web3j.utils.Numeric;
+import org.tpc.abi.EventEncoder;
+import org.tpc.abi.EventValues;
+import org.tpc.abi.FunctionEncoder;
+import org.tpc.abi.FunctionReturnDecoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Address;
+import org.tpc.abi.datatypes.Event;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.crypto.Credentials;
+import org.tpc.ens.EnsResolver;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.DefaultBlockParameterName;
+import org.tpc.protocol.core.RemoteCall;
+import org.tpc.protocol.core.RemoteFunctionCall;
+import org.tpc.protocol.core.methods.response.EthGetCode;
+import org.tpc.protocol.core.methods.response.Log;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.protocol.exceptions.TransactionException;
+import org.tpc.tx.exceptions.ContractCallException;
+import org.tpc.tx.gas.ContractGasProvider;
+import org.tpc.tx.gas.StaticGasProvider;
+import org.tpc.utils.Numeric;
 
-import static org.web3j.utils.RevertReasonExtractor.extractRevertReason;
+import static org.tpc.utils.RevertReasonExtractor.extractRevertReason;
 
 /**
  * Solidity contract type abstraction for interacting with smart contracts via native Java types.
@@ -59,7 +59,7 @@ public abstract class Contract extends ManagedTransaction {
     // https://www.reddit.com/r/ethereum/comments/5g8ia6/attention_miners_we_recommend_raising_gas_limit/
     /**
      * @deprecated ...
-     * @see org.web3j.tx.gas.DefaultGasProvider
+     * @see org.tpc.tx.gas.DefaultGasProvider
      */
     public static final BigInteger GAS_LIMIT = BigInteger.valueOf(4_300_000);
 
