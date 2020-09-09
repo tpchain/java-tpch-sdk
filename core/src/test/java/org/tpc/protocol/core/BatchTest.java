@@ -10,16 +10,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.core;
+package org.tpc.protocol.core;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.BatchTester;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.methods.response.NetVersion;
-import org.web3j.protocol.core.methods.response.Web3ClientVersion;
-import org.web3j.protocol.core.methods.response.Web3Sha3;
-import org.web3j.protocol.http.HttpService;
+import org.tpc.protocol.BatchTester;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.methods.response.NetVersion;
+import org.tpc.protocol.core.methods.response.Web3ClientVersion;
+import org.tpc.protocol.core.methods.response.Web3Sha3;
+import org.tpc.protocol.http.HttpService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
