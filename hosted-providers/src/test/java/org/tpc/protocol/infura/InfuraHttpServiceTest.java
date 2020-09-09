@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.infura;
+package org.tpc.protocol.infura;
 
 import java.util.Collections;
 
@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.protocol.infura.InfuraHttpService.buildClientVersionHeader;
+import static org.tpc.protocol.infura.InfuraHttpService.buildClientVersionHeader;
 
 public class InfuraHttpServiceTest {
 
