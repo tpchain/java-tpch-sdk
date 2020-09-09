@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx.exceptions;
+package org.tpc.tx.exceptions;
 
 /** Exception resulting from issues calling methods on Smart Contracts. */
 public class ContractCallException extends RuntimeException {
