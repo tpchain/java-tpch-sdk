@@ -10,13 +10,13 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.geth;
+package org.tpc.protocol.geth;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.ResponseTester;
-import org.web3j.protocol.geth.response.PersonalEcRecover;
-import org.web3j.protocol.geth.response.PersonalImportRawKey;
+import org.tpc.protocol.ResponseTester;
+import org.tpc.protocol.geth.response.PersonalEcRecover;
+import org.tpc.protocol.geth.response.PersonalImportRawKey;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
