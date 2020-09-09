@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.ipc;
+package org.tpc.protocol.ipc;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,8 +21,8 @@ import java.util.LinkedList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.Web3ClientVersion;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.Web3ClientVersion;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doAnswer;
