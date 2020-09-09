@@ -10,19 +10,19 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.tx.response;
+package org.tpc.tx.response;
 
 import java.io.IOException;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.Response;
-import org.web3j.protocol.core.methods.response.EthGetTransactionReceipt;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.exceptions.TransactionException;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.Response;
+import org.tpc.protocol.core.methods.response.EthGetTransactionReceipt;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.protocol.exceptions.TransactionException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
