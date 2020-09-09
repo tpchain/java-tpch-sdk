@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.websocket;
+package org.tpc.protocol.websocket;
 
 import java.io.IOException;
 import java.net.ConnectException;
@@ -40,15 +40,15 @@ import io.reactivex.subjects.BehaviorSubject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.web3j.protocol.ObjectMapperFactory;
-import org.web3j.protocol.Web3jService;
-import org.web3j.protocol.core.BatchRequest;
-import org.web3j.protocol.core.BatchResponse;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.Response;
-import org.web3j.protocol.core.methods.response.EthSubscribe;
-import org.web3j.protocol.core.methods.response.EthUnsubscribe;
-import org.web3j.protocol.websocket.events.Notification;
+import org.tpc.protocol.ObjectMapperFactory;
+import org.tpc.protocol.Web3jService;
+import org.tpc.protocol.core.BatchRequest;
+import org.tpc.protocol.core.BatchResponse;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.Response;
+import org.tpc.protocol.core.methods.response.EthSubscribe;
+import org.tpc.protocol.core.methods.response.EthUnsubscribe;
+import org.tpc.protocol.websocket.events.Notification;
 
 /**
  * Web socket service that allows to interact with JSON-RPC via WebSocket protocol.
