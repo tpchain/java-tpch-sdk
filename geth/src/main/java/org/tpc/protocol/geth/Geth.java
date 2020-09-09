@@ -10,20 +10,20 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.geth;
+package org.tpc.protocol.geth;
 
 import io.reactivex.Flowable;
 
-import org.web3j.protocol.Web3jService;
-import org.web3j.protocol.admin.Admin;
-import org.web3j.protocol.admin.methods.response.BooleanResponse;
-import org.web3j.protocol.admin.methods.response.PersonalSign;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.MinerStartResponse;
-import org.web3j.protocol.geth.response.PersonalEcRecover;
-import org.web3j.protocol.geth.response.PersonalImportRawKey;
-import org.web3j.protocol.websocket.events.PendingTransactionNotification;
-import org.web3j.protocol.websocket.events.SyncingNotfication;
+import org.tpc.protocol.Web3jService;
+import org.tpc.protocol.admin.Admin;
+import org.tpc.protocol.admin.methods.response.BooleanResponse;
+import org.tpc.protocol.admin.methods.response.PersonalSign;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.MinerStartResponse;
+import org.tpc.protocol.geth.response.PersonalEcRecover;
+import org.tpc.protocol.geth.response.PersonalImportRawKey;
+import org.tpc.protocol.websocket.events.PendingTransactionNotification;
+import org.tpc.protocol.websocket.events.SyncingNotfication;
 
 /** JSON-RPC Request object building factory for Geth. */
 public interface Geth extends Admin {
