@@ -10,16 +10,16 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.parity;
+package org.tpc.protocol.parity;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.protocol.admin.methods.response.NewAccountIdentifier;
-import org.web3j.protocol.admin.methods.response.PersonalListAccounts;
-import org.web3j.protocol.admin.methods.response.PersonalSign;
-import org.web3j.protocol.admin.methods.response.PersonalUnlockAccount;
-import org.web3j.protocol.http.HttpService;
+import org.tpc.protocol.admin.methods.response.NewAccountIdentifier;
+import org.tpc.protocol.admin.methods.response.PersonalListAccounts;
+import org.tpc.protocol.admin.methods.response.PersonalSign;
+import org.tpc.protocol.admin.methods.response.PersonalUnlockAccount;
+import org.tpc.protocol.http.HttpService;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
