@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.crypto;
+package org.tpc.crypto;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -30,13 +30,13 @@ import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.web3j.abi.TypeEncoder;
-import org.web3j.abi.datatypes.AbiTypes;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.utils.Numeric;
+import org.tpc.abi.TypeEncoder;
+import org.tpc.abi.datatypes.AbiTypes;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.utils.Numeric;
 
-import static org.web3j.crypto.Hash.sha3;
-import static org.web3j.crypto.Hash.sha3String;
+import static org.tpc.crypto.Hash.sha3;
+import static org.tpc.crypto.Hash.sha3String;
 
 public class StructuredDataEncoder {
     public final StructuredData.EIP712Message jsonMessageObject;
