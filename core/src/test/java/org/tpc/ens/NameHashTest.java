@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.ens;
+package org.tpc.ens;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
-import static org.web3j.ens.NameHash.nameHash;
-import static org.web3j.ens.NameHash.normalise;
+import static org.tpc.ens.NameHash.nameHash;
+import static org.tpc.ens.NameHash.normalise;
 
 public class NameHashTest {
 
