@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.http;
+package org.tpc.protocol.http;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -25,11 +25,11 @@ import okhttp3.ResponseBody;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.response.EthBlockNumber;
-import org.web3j.protocol.core.methods.response.EthSubscribe;
-import org.web3j.protocol.exceptions.ClientConnectionException;
-import org.web3j.protocol.websocket.events.NewHeadsNotification;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.response.EthBlockNumber;
+import org.tpc.protocol.core.methods.response.EthSubscribe;
+import org.tpc.protocol.exceptions.ClientConnectionException;
+import org.tpc.protocol.websocket.events.NewHeadsNotification;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
