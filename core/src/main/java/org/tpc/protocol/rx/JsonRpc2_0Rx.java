@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.rx;
+package org.tpc.protocol.rx;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -24,18 +24,18 @@ import io.reactivex.FlowableEmitter;
 import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
 
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.DefaultBlockParameterNumber;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.filters.BlockFilter;
-import org.web3j.protocol.core.filters.LogFilter;
-import org.web3j.protocol.core.filters.PendingTransactionFilter;
-import org.web3j.protocol.core.methods.response.EthBlock;
-import org.web3j.protocol.core.methods.response.Log;
-import org.web3j.protocol.core.methods.response.Transaction;
-import org.web3j.utils.Flowables;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.DefaultBlockParameterName;
+import org.tpc.protocol.core.DefaultBlockParameterNumber;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.filters.BlockFilter;
+import org.tpc.protocol.core.filters.LogFilter;
+import org.tpc.protocol.core.filters.PendingTransactionFilter;
+import org.tpc.protocol.core.methods.response.EthBlock;
+import org.tpc.protocol.core.methods.response.Log;
+import org.tpc.protocol.core.methods.response.Transaction;
+import org.tpc.utils.Flowables;
 
 /** web3j reactive API implementation. */
 public class JsonRpc2_0Rx {
@@ -71,7 +71,7 @@ public class JsonRpc2_0Rx {
     }
 
     public Flowable<Log> ethLogFlowable(
-            org.web3j.protocol.core.methods.request.EthFilter ethFilter, long pollingInterval) {
+            org.tpc.protocol.core.methods.request.EthFilter ethFilter, long pollingInterval) {
         return Flowable.create(
                 subscriber -> {
                     LogFilter logFilter = new LogFilter(web3j, subscriber::onNext, ethFilter);
@@ -82,7 +82,7 @@ public class JsonRpc2_0Rx {
     }
 
     private <T> void run(
-            org.web3j.protocol.core.filters.Filter<T> filter,
+            org.tpc.protocol.core.filters.Filter<T> filter,
             FlowableEmitter<? super T> emitter,
             long pollingInterval) {
 
