@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.crypto;
+package org.tpc.crypto;
 
 import java.math.BigInteger;
 import java.security.SignatureException;
@@ -25,9 +25,9 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.math.ec.custom.sec.SecP256K1Curve;
 
-import org.web3j.utils.Numeric;
+import org.tpc.utils.Numeric;
 
-import static org.web3j.utils.Assertions.verifyPrecondition;
+import static org.tpc.utils.Assertions.verifyPrecondition;
 
 /**
  * Transaction signing logic.
