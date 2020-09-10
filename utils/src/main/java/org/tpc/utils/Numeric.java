@@ -10,14 +10,14 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.utils;
+package org.tpc.utils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Arrays;
 
-import org.web3j.exceptions.MessageDecodingException;
-import org.web3j.exceptions.MessageEncodingException;
+import org.tpc.exceptions.MessageDecodingException;
+import org.tpc.exceptions.MessageEncodingException;
 
 /**
  * Message codec functions.
