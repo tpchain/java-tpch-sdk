@@ -10,26 +10,26 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.scenarios;
+package org.tpc.protocol.scenarios;
 
 import java.math.BigInteger;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.abi.datatypes.generated.Uint256;
-import org.web3j.generated.Fibonacci;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.http.HttpService;
+import org.tpc.abi.datatypes.generated.Uint256;
+import org.tpc.generated.Fibonacci;
+import org.tpc.protocol.Web3j;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.protocol.http.HttpService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test Fibonacci contract generated wrappers.
  *
- * <p>Generated via running org.web3j.codegen.SolidityFunctionWrapperGenerator with params:
+ * <p>Generated via running org.tpc.codegen.SolidityFunctionWrapperGenerator with params:
  * <em>project-home</em>/src/test/resources/solidity/fibonacci.abi -o
- * <em>project-home</em>/src/integration-test/java -p org.web3j.generated
+ * <em>project-home</em>/src/integration-test/java -p org.tpc.generated
  */
 public class FunctionWrappersIT extends Scenario {
 
