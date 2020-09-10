@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.parity;
+package org.tpc.protocol.parity;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -23,20 +23,20 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.crypto.WalletFile;
-import org.web3j.protocol.ResponseTester;
-import org.web3j.protocol.core.methods.response.VoidResponse;
-import org.web3j.protocol.parity.methods.response.FullTraceInfo;
-import org.web3j.protocol.parity.methods.response.ParityAddressesResponse;
-import org.web3j.protocol.parity.methods.response.ParityAllAccountsInfo;
-import org.web3j.protocol.parity.methods.response.ParityDefaultAddressResponse;
-import org.web3j.protocol.parity.methods.response.ParityDeriveAddress;
-import org.web3j.protocol.parity.methods.response.ParityExportAccount;
-import org.web3j.protocol.parity.methods.response.ParityFullTraceResponse;
-import org.web3j.protocol.parity.methods.response.ParityListRecentDapps;
-import org.web3j.protocol.parity.methods.response.StateDiff;
-import org.web3j.protocol.parity.methods.response.Trace;
-import org.web3j.protocol.parity.methods.response.VMTrace;
+import org.tpc.crypto.WalletFile;
+import org.tpc.protocol.ResponseTester;
+import org.tpc.protocol.core.methods.response.VoidResponse;
+import org.tpc.protocol.parity.methods.response.FullTraceInfo;
+import org.tpc.protocol.parity.methods.response.ParityAddressesResponse;
+import org.tpc.protocol.parity.methods.response.ParityAllAccountsInfo;
+import org.tpc.protocol.parity.methods.response.ParityDefaultAddressResponse;
+import org.tpc.protocol.parity.methods.response.ParityDeriveAddress;
+import org.tpc.protocol.parity.methods.response.ParityExportAccount;
+import org.tpc.protocol.parity.methods.response.ParityFullTraceResponse;
+import org.tpc.protocol.parity.methods.response.ParityListRecentDapps;
+import org.tpc.protocol.parity.methods.response.StateDiff;
+import org.tpc.protocol.parity.methods.response.Trace;
+import org.tpc.protocol.parity.methods.response.VMTrace;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -388,8 +388,8 @@ public class ResponseTest extends ResponseTester {
         ParityFullTraceResponse response = deserialiseResponse(ParityFullTraceResponse.class);
         assertNotNull(response);
 
-        org.web3j.protocol.parity.methods.response.Trace trace1 =
-                new org.web3j.protocol.parity.methods.response.Trace();
+        org.tpc.protocol.parity.methods.response.Trace trace1 =
+                new org.tpc.protocol.parity.methods.response.Trace();
         Trace.CreateAction action1 = new Trace.CreateAction();
         action1.setFrom("0x6c24f4387b31251fd7b6d7a1269d880b2108bf3a");
         action1.setGas("0x4bc1f5");
@@ -412,8 +412,8 @@ public class ResponseTest extends ResponseTester {
         trace1.setTransactionPosition(BigInteger.ONE);
         trace1.setType("create");
 
-        org.web3j.protocol.parity.methods.response.Trace trace2 =
-                new org.web3j.protocol.parity.methods.response.Trace();
+        org.tpc.protocol.parity.methods.response.Trace trace2 =
+                new org.tpc.protocol.parity.methods.response.Trace();
         Trace.CallAction action2 = new Trace.CallAction();
         action2.setCallType("call");
         action2.setFrom("0x14772e4f805b4dd2e69bd6d3f9b5edf0dfa5385a");
@@ -427,8 +427,8 @@ public class ResponseTest extends ResponseTester {
         trace2.setTraceAddress(Collections.emptyList());
         trace2.setType("call");
 
-        org.web3j.protocol.parity.methods.response.Trace trace3 =
-                new org.web3j.protocol.parity.methods.response.Trace();
+        org.tpc.protocol.parity.methods.response.Trace trace3 =
+                new org.tpc.protocol.parity.methods.response.Trace();
         Trace.SuicideAction action3 = new Trace.SuicideAction();
         action3.setAddress("0xb8d2ac822f3d0445f5b83d32b0b176c2cb3d0e60");
         action3.setBalance("0x0");
@@ -443,8 +443,8 @@ public class ResponseTest extends ResponseTester {
         trace3.setTransactionPosition(BigInteger.valueOf(2));
         trace3.setType("suicide");
 
-        org.web3j.protocol.parity.methods.response.Trace trace4 =
-                new org.web3j.protocol.parity.methods.response.Trace();
+        org.tpc.protocol.parity.methods.response.Trace trace4 =
+                new org.tpc.protocol.parity.methods.response.Trace();
         Trace.RewardAction action4 = new Trace.RewardAction();
         action4.setAuthor("0xb8d2ac822f3d0445f5b83d32b0b176c2cb3d0e60");
         action4.setValue("0x0");
@@ -456,7 +456,7 @@ public class ResponseTest extends ResponseTester {
         trace4.setTraceAddress(Collections.singletonList(BigInteger.ZERO));
         trace4.setType("reward");
 
-        List<org.web3j.protocol.parity.methods.response.Trace> traces = new ArrayList<>();
+        List<org.tpc.protocol.parity.methods.response.Trace> traces = new ArrayList<>();
         traces.add(trace1);
         traces.add(trace2);
         traces.add(trace3);
