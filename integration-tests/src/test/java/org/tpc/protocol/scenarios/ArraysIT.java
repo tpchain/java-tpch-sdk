@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.scenarios;
+package org.tpc.protocol.scenarios;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -22,8 +22,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.generated.Arrays;
-import org.web3j.tx.gas.DefaultGasProvider;
+import org.tpc.generated.Arrays;
+import org.tpc.tx.gas.DefaultGasProvider;
 
 import static java.math.BigInteger.valueOf;
 import static org.junit.jupiter.api.Assertions.assertEquals;
