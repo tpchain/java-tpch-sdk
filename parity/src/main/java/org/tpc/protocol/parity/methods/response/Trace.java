@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.parity.methods.response;
+package org.tpc.protocol.parity.methods.response;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -23,7 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import org.web3j.utils.Numeric;
+import org.tpc.utils.Numeric;
 
 /**
  * Trace used in following methods.
