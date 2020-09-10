@@ -1,11 +1,11 @@
-package org.web3j.tuples.generated;
+package org.tpc.tuples.generated;
 
-import org.web3j.tuples.Tuple;
+import org.tpc.tuples.Tuple;
 
 /**
  * Auto generated code.
  * <p><strong>Do not modifiy!</strong>
- * <p>Please use org.web3j.codegen.TupleGenerator in the 
+ * <p>Please use org.tpc.codegen.TupleGenerator in the
  * <a href="https://github.com/web3j/web3j/tree/master/codegen">codegen module</a> to update.
  */
 public final class Tuple1<T1> implements Tuple {
