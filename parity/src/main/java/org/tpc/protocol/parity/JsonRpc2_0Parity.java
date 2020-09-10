@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.parity;
+package org.tpc.protocol.parity;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -21,27 +21,27 @@ import java.util.Map;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.stream.Collectors;
 
-import org.web3j.crypto.WalletFile;
-import org.web3j.protocol.Web3jService;
-import org.web3j.protocol.admin.JsonRpc2_0Admin;
-import org.web3j.protocol.admin.methods.response.BooleanResponse;
-import org.web3j.protocol.admin.methods.response.NewAccountIdentifier;
-import org.web3j.protocol.admin.methods.response.PersonalSign;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.Request;
-import org.web3j.protocol.core.methods.request.Transaction;
-import org.web3j.protocol.parity.methods.request.Derivation;
-import org.web3j.protocol.parity.methods.request.TraceFilter;
-import org.web3j.protocol.parity.methods.response.ParityAddressesResponse;
-import org.web3j.protocol.parity.methods.response.ParityAllAccountsInfo;
-import org.web3j.protocol.parity.methods.response.ParityDefaultAddressResponse;
-import org.web3j.protocol.parity.methods.response.ParityDeriveAddress;
-import org.web3j.protocol.parity.methods.response.ParityExportAccount;
-import org.web3j.protocol.parity.methods.response.ParityFullTraceResponse;
-import org.web3j.protocol.parity.methods.response.ParityListRecentDapps;
-import org.web3j.protocol.parity.methods.response.ParityTraceGet;
-import org.web3j.protocol.parity.methods.response.ParityTracesResponse;
-import org.web3j.utils.Numeric;
+import org.tpc.crypto.WalletFile;
+import org.tpc.protocol.Web3jService;
+import org.tpc.protocol.admin.JsonRpc2_0Admin;
+import org.tpc.protocol.admin.methods.response.BooleanResponse;
+import org.tpc.protocol.admin.methods.response.NewAccountIdentifier;
+import org.tpc.protocol.admin.methods.response.PersonalSign;
+import org.tpc.protocol.core.DefaultBlockParameter;
+import org.tpc.protocol.core.Request;
+import org.tpc.protocol.core.methods.request.Transaction;
+import org.tpc.protocol.parity.methods.request.Derivation;
+import org.tpc.protocol.parity.methods.request.TraceFilter;
+import org.tpc.protocol.parity.methods.response.ParityAddressesResponse;
+import org.tpc.protocol.parity.methods.response.ParityAllAccountsInfo;
+import org.tpc.protocol.parity.methods.response.ParityDefaultAddressResponse;
+import org.tpc.protocol.parity.methods.response.ParityDeriveAddress;
+import org.tpc.protocol.parity.methods.response.ParityExportAccount;
+import org.tpc.protocol.parity.methods.response.ParityFullTraceResponse;
+import org.tpc.protocol.parity.methods.response.ParityListRecentDapps;
+import org.tpc.protocol.parity.methods.response.ParityTraceGet;
+import org.tpc.protocol.parity.methods.response.ParityTracesResponse;
+import org.tpc.utils.Numeric;
 
 /** JSON-RPC 2.0 factory implementation for Parity. */
 public class JsonRpc2_0Parity extends JsonRpc2_0Admin implements Parity {
