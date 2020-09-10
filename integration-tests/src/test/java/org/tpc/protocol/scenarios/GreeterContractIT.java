@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.scenarios;
+package org.tpc.protocol.scenarios;
 
 import java.math.BigInteger;
 import java.util.Collections;
@@ -18,15 +18,15 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import org.web3j.abi.FunctionEncoder;
-import org.web3j.abi.FunctionReturnDecoder;
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Type;
-import org.web3j.abi.datatypes.Utf8String;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.request.Transaction;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.abi.FunctionEncoder;
+import org.tpc.abi.FunctionReturnDecoder;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Type;
+import org.tpc.abi.datatypes.Utf8String;
+import org.tpc.protocol.core.DefaultBlockParameterName;
+import org.tpc.protocol.core.methods.request.Transaction;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -88,7 +88,7 @@ public class GreeterContractIT extends Scenario {
                         BigInteger.ZERO,
                         getGreeterSolidityBinary() + encodedConstructor);
 
-        org.web3j.protocol.core.methods.response.EthSendTransaction transactionResponse =
+        org.tpc.protocol.core.methods.response.EthSendTransaction transactionResponse =
                 web3j.ethSendTransaction(transaction).sendAsync().get();
 
         return transactionResponse.getTransactionHash();
@@ -99,7 +99,7 @@ public class GreeterContractIT extends Scenario {
 
         String encodedFunction = FunctionEncoder.encode(function);
 
-        org.web3j.protocol.core.methods.response.EthCall response =
+        org.tpc.protocol.core.methods.response.EthCall response =
                 web3j.ethCall(
                                 Transaction.createEthCallTransaction(
                                         ALICE.getAddress(), contractAddress, encodedFunction),
