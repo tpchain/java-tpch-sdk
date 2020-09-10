@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.utils;
+package org.tpc.utils;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -21,13 +21,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.utils.Strings.capitaliseFirstLetter;
-import static org.web3j.utils.Strings.isEmpty;
-import static org.web3j.utils.Strings.join;
-import static org.web3j.utils.Strings.lowercaseFirstLetter;
-import static org.web3j.utils.Strings.repeat;
-import static org.web3j.utils.Strings.toCsv;
-import static org.web3j.utils.Strings.zeros;
+import static org.tpc.utils.Strings.capitaliseFirstLetter;
+import static org.tpc.utils.Strings.isEmpty;
+import static org.tpc.utils.Strings.join;
+import static org.tpc.utils.Strings.lowercaseFirstLetter;
+import static org.tpc.utils.Strings.repeat;
+import static org.tpc.utils.Strings.toCsv;
+import static org.tpc.utils.Strings.zeros;
 
 public class StringsTest {
 
