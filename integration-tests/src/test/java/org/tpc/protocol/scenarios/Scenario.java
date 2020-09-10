@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.scenarios;
+package org.tpc.protocol.scenarios;
 
 import java.io.IOException;
 import java.math.BigInteger;
@@ -23,18 +23,18 @@ import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 
-import org.web3j.abi.TypeReference;
-import org.web3j.abi.datatypes.Function;
-import org.web3j.abi.datatypes.Uint;
-import org.web3j.crypto.Credentials;
-import org.web3j.protocol.admin.Admin;
-import org.web3j.protocol.admin.methods.response.PersonalUnlockAccount;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.response.EthGetTransactionCount;
-import org.web3j.protocol.core.methods.response.EthGetTransactionReceipt;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.protocol.http.HttpService;
-import org.web3j.tx.gas.StaticGasProvider;
+import org.tpc.abi.TypeReference;
+import org.tpc.abi.datatypes.Function;
+import org.tpc.abi.datatypes.Uint;
+import org.tpc.crypto.Credentials;
+import org.tpc.protocol.admin.Admin;
+import org.tpc.protocol.admin.methods.response.PersonalUnlockAccount;
+import org.tpc.protocol.core.DefaultBlockParameterName;
+import org.tpc.protocol.core.methods.response.EthGetTransactionCount;
+import org.tpc.protocol.core.methods.response.EthGetTransactionReceipt;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.protocol.http.HttpService;
+import org.tpc.tx.gas.StaticGasProvider;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
