@@ -10,7 +10,7 @@
  * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  */
-package org.web3j.protocol.scenarios;
+package org.tpc.protocol.scenarios;
 
 import java.math.BigInteger;
 import java.util.concurrent.CountDownLatch;
@@ -19,17 +19,17 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.disposables.Disposable;
 import org.junit.jupiter.api.Test;
 
-import org.web3j.generated.HumanStandardToken;
-import org.web3j.protocol.core.DefaultBlockParameterName;
-import org.web3j.protocol.core.methods.response.TransactionReceipt;
-import org.web3j.tx.gas.ContractGasProvider;
-import org.web3j.tx.gas.DefaultGasProvider;
+import org.tpc.generated.HumanStandardToken;
+import org.tpc.protocol.core.DefaultBlockParameterName;
+import org.tpc.protocol.core.methods.response.TransactionReceipt;
+import org.tpc.tx.gas.ContractGasProvider;
+import org.tpc.tx.gas.DefaultGasProvider;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.web3j.generated.HumanStandardToken.ApprovalEventResponse;
-import static org.web3j.generated.HumanStandardToken.TransferEventResponse;
-import static org.web3j.tx.TransactionManager.DEFAULT_POLLING_FREQUENCY;
+import static org.tpc.generated.HumanStandardToken.ApprovalEventResponse;
+import static org.tpc.generated.HumanStandardToken.TransferEventResponse;
+import static org.tpc.tx.TransactionManager.DEFAULT_POLLING_FREQUENCY;
 
 /** Generated HumanStandardToken integration test for all supported scenarios. */
 public class HumanStandardTokenGeneratedIT extends Scenario {
