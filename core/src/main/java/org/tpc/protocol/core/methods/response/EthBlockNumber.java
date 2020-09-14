@@ -15,7 +15,7 @@ package org.tpc.protocol.core.methods.response;
 import java.math.BigInteger;
 
 import org.tpc.protocol.core.Response;
-import org.web3j.utils.Numeric;
+import org.tpc.utils.Numeric;
 
 /** eth_blockNumber. */
 public class EthBlockNumber extends Response<String> {
