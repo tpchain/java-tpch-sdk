@@ -1,4 +1,4 @@
-package org.web3j.contracts.eip20.generated;
+package org.tpc.contracts.eip20.generated;
 
 import io.reactivex.Flowable;
 import java.math.BigInteger;

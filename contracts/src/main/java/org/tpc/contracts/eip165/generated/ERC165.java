@@ -1,4 +1,4 @@
-package org.web3j.contracts.eip165.generated;
+package org.tpc.contracts.eip165.generated;
 
 import java.math.BigInteger;
 import java.util.Arrays;
