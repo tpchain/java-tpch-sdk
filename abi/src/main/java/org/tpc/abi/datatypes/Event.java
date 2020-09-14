@@ -15,9 +15,9 @@ package org.tpc.abi.datatypes;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.web3j.abi.TypeReference;
+import org.tpc.abi.TypeReference;
 
-import static org.web3j.abi.Utils.convert;
+import static org.tpc.abi.Utils.convert;
 
 /** Event wrapper type. */
 public class Event {
