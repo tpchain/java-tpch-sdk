@@ -12,10 +12,15 @@
  */
 package org.tpc.crypto;
 
+import org.web3j.crypto.Bip39Wallet;
+import org.web3j.crypto.CipherException;
+import org.web3j.crypto.Credentials;
+import org.web3j.crypto.MnemonicUtils;
+
 import java.io.File;
 import java.io.IOException;
 
-import static org.tpc.crypto.Bip32ECKeyPair.HARDENED_BIT;
+import static org.web3j.crypto.Bip32ECKeyPair.HARDENED_BIT;
 
 public class Bip44WalletUtils extends WalletUtils {
 

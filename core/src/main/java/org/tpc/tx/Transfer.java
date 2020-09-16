@@ -18,13 +18,13 @@ import java.math.BigInteger;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
-import org.tpc.crypto.Credentials;
+import org.web3j.crypto.Credentials;
 import org.tpc.protocol.Web3j;
 import org.tpc.protocol.core.RemoteCall;
 import org.tpc.protocol.core.methods.response.TransactionReceipt;
 import org.tpc.protocol.exceptions.TransactionException;
-import org.tpc.utils.Convert;
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Convert;
+import org.web3j.utils.Numeric;
 
 /** Class for performing Ether transactions on the Ethereum blockchain. */
 public class Transfer extends ManagedTransaction {

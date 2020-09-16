@@ -16,8 +16,8 @@ import java.net.IDN;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-import org.tpc.crypto.Hash;
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.Hash;
+import org.web3j.utils.Numeric;
 
 /** ENS name hash implementation. */
 public class NameHash {

@@ -15,9 +15,9 @@ package org.tpc.tx;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import org.tpc.crypto.Credentials;
 import org.tpc.protocol.Web3j;
 import org.tpc.tx.response.TransactionReceiptProcessor;
+import org.web3j.crypto.Credentials;
 
 /**
  * Simple RawTransactionManager derivative that manages nonces to facilitate multiple transactions
