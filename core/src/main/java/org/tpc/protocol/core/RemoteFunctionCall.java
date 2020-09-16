@@ -15,10 +15,10 @@ package org.tpc.protocol.core;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import org.tpc.abi.FunctionEncoder;
-import org.tpc.abi.FunctionReturnDecoder;
-import org.tpc.abi.datatypes.Function;
-import org.tpc.abi.datatypes.Type;
+import org.web3j.abi.FunctionEncoder;
+import org.web3j.abi.FunctionReturnDecoder;
+import org.web3j.abi.datatypes.Function;
+import org.web3j.abi.datatypes.Type;
 
 /**
  * A wrapper for a callable function. Can also return the raw encoded function

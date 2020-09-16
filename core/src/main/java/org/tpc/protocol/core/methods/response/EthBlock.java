@@ -27,7 +27,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import org.tpc.protocol.ObjectMapperFactory;
 import org.tpc.protocol.core.Response;
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /**
  * Block object returned by:

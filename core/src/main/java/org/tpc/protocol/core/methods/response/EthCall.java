@@ -15,12 +15,12 @@ package org.tpc.protocol.core.methods.response;
 import java.util.Collections;
 import java.util.List;
 
-import org.tpc.abi.FunctionReturnDecoder;
-import org.tpc.abi.TypeReference;
-import org.tpc.abi.datatypes.AbiTypes;
-import org.tpc.abi.datatypes.Type;
-import org.tpc.abi.datatypes.Utf8String;
 import org.tpc.protocol.core.Response;
+import org.web3j.abi.FunctionReturnDecoder;
+import org.web3j.abi.TypeReference;
+import org.web3j.abi.datatypes.Type;
+import org.web3j.abi.datatypes.Utf8String;
+import org.web3j.abi.datatypes.generated.AbiTypes;
 
 /** eth_call. */
 public class EthCall extends Response<String> {

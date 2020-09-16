@@ -15,7 +15,7 @@ package org.tpc.protocol.core.methods.response;
 import java.math.BigInteger;
 
 import org.tpc.protocol.core.Response;
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /** eth_getBlockTransactionCountByHash. */
 public class EthGetBlockTransactionCountByHash extends Response<String> {

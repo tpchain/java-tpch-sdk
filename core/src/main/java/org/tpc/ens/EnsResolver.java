@@ -12,7 +12,6 @@
  */
 package org.tpc.ens;
 
-import org.tpc.crypto.Keys;
 import org.tpc.crypto.WalletUtils;
 import org.tpc.ens.contracts.generated.ENS;
 import org.tpc.ens.contracts.generated.PublicResolver;
@@ -24,7 +23,8 @@ import org.tpc.protocol.core.methods.response.NetVersion;
 import org.tpc.tx.ClientTransactionManager;
 import org.tpc.tx.TransactionManager;
 import org.tpc.tx.gas.DefaultGasProvider;
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.Keys;
+import org.web3j.utils.Numeric;
 
 /** Resolution logic for contract addresses. */
 public class EnsResolver {

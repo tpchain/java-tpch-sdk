@@ -7,29 +7,23 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
-import org.tpc.abi.EventEncoder;
-import org.tpc.abi.FunctionEncoder;
-import org.tpc.abi.TypeReference;
-import org.tpc.abi.datatypes.Address;
-import org.tpc.abi.datatypes.Bool;
-import org.tpc.abi.datatypes.DynamicBytes;
-import org.tpc.abi.datatypes.Event;
-import org.tpc.abi.datatypes.Function;
-import org.tpc.abi.datatypes.Type;
-import org.tpc.abi.datatypes.Utf8String;
-import org.tpc.abi.datatypes.generated.Bytes32;
-import org.tpc.abi.datatypes.generated.Uint256;
-import org.tpc.crypto.Credentials;
 import org.tpc.protocol.Web3j;
 import org.tpc.protocol.core.DefaultBlockParameter;
 import org.tpc.protocol.core.RemoteCall;
 import org.tpc.protocol.core.methods.request.EthFilter;
 import org.tpc.protocol.core.methods.response.Log;
 import org.tpc.protocol.core.methods.response.TransactionReceipt;
-import org.tpc.tuples.generated.Tuple2;
 import org.tpc.tx.Contract;
 import org.tpc.tx.TransactionManager;
 import org.tpc.tx.gas.ContractGasProvider;
+import org.web3j.abi.EventEncoder;
+import org.web3j.abi.FunctionEncoder;
+import org.web3j.abi.TypeReference;
+import org.web3j.abi.datatypes.*;
+import org.web3j.abi.datatypes.generated.Bytes32;
+import org.web3j.abi.datatypes.generated.Uint256;
+import org.web3j.crypto.Credentials;
+import org.web3j.tuples.generated.Tuple2;
 
 /**
  * <p>Auto generated code.
@@ -69,7 +63,7 @@ public class PublicResolver extends Contract {
 
     public static final String FUNC_SETADDR = "setAddr";
 
-    public static final Event ADDRCHANGED_EVENT = new Event("AddrChanged", 
+    public static final Event ADDRCHANGED_EVENT = new Event("AddrChanged",
             Arrays.<TypeReference<?>>asList(new TypeReference<Bytes32>(true) {}, new TypeReference<Address>() {}));
     ;
 
@@ -112,8 +106,8 @@ public class PublicResolver extends Contract {
     }
 
     public RemoteCall<Boolean> supportsInterface(byte[] interfaceID) {
-        final Function function = new Function(FUNC_SUPPORTSINTERFACE, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes4(interfaceID)),
+        final Function function = new Function(FUNC_SUPPORTSINTERFACE,
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes4(interfaceID)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Bool>() {}));
         return executeRemoteCallSingleValueReturn(function, Boolean.class);
     }
@@ -121,17 +115,17 @@ public class PublicResolver extends Contract {
     public RemoteCall<TransactionReceipt> setText(byte[] node, String key, String value) {
         final Function function = new Function(
                 FUNC_SETTEXT, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.Utf8String(key),
-                new org.tpc.abi.datatypes.Utf8String(value)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.Utf8String(key),
+                new org.web3j.abi.datatypes.Utf8String(value)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<Tuple2<BigInteger, byte[]>> ABI(byte[] node, BigInteger contentTypes) {
         final Function function = new Function(FUNC_ABI, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.generated.Uint256(contentTypes)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.generated.Uint256(contentTypes)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint256>() {}, new TypeReference<DynamicBytes>() {}));
         return new RemoteCall<Tuple2<BigInteger, byte[]>>(
                 new Callable<Tuple2<BigInteger, byte[]>>() {
@@ -148,31 +142,31 @@ public class PublicResolver extends Contract {
     public RemoteCall<TransactionReceipt> setPubkey(byte[] node, byte[] x, byte[] y) {
         final Function function = new Function(
                 FUNC_SETPUBKEY, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.generated.Bytes32(x),
-                new org.tpc.abi.datatypes.generated.Bytes32(y)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.generated.Bytes32(x),
+                new org.web3j.abi.datatypes.generated.Bytes32(y)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<byte[]> content(byte[] node) {
         final Function function = new Function(FUNC_CONTENT, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Bytes32>() {}));
         return executeRemoteCallSingleValueReturn(function, byte[].class);
     }
 
     public RemoteCall<String> addr(byte[] node) {
         final Function function = new Function(FUNC_ADDR, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteCall<String> text(byte[] node, String key) {
         final Function function = new Function(FUNC_TEXT, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.Utf8String(key)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.Utf8String(key)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Utf8String>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
@@ -180,16 +174,16 @@ public class PublicResolver extends Contract {
     public RemoteCall<TransactionReceipt> setABI(byte[] node, BigInteger contentType, byte[] data) {
         final Function function = new Function(
                 FUNC_SETABI, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.generated.Uint256(contentType),
-                new org.tpc.abi.datatypes.DynamicBytes(data)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.generated.Uint256(contentType),
+                new org.web3j.abi.datatypes.DynamicBytes(data)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<String> name(byte[] node) {
         final Function function = new Function(FUNC_NAME, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Utf8String>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
@@ -197,8 +191,8 @@ public class PublicResolver extends Contract {
     public RemoteCall<TransactionReceipt> setName(byte[] node, String name) {
         final Function function = new Function(
                 FUNC_SETNAME, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.Utf8String(name)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.Utf8String(name)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
@@ -206,15 +200,15 @@ public class PublicResolver extends Contract {
     public RemoteCall<TransactionReceipt> setContent(byte[] node, byte[] hash) {
         final Function function = new Function(
                 FUNC_SETCONTENT, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.generated.Bytes32(hash)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.generated.Bytes32(hash)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<Tuple2<byte[], byte[]>> pubkey(byte[] node) {
         final Function function = new Function(FUNC_PUBKEY, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Bytes32>() {}, new TypeReference<Bytes32>() {}));
         return new RemoteCall<Tuple2<byte[], byte[]>>(
                 new Callable<Tuple2<byte[], byte[]>>() {
@@ -231,31 +225,31 @@ public class PublicResolver extends Contract {
     public RemoteCall<TransactionReceipt> setAddr(byte[] node, String addr) {
         final Function function = new Function(
                 FUNC_SETADDR, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.Address(addr)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.Address(addr)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public static RemoteCall<PublicResolver> deploy(Web3j web3j, Credentials credentials, ContractGasProvider contractGasProvider, String ensAddr) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(ensAddr)));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(ensAddr)));
         return deployRemoteCall(PublicResolver.class, web3j, credentials, contractGasProvider, BINARY, encodedConstructor);
     }
 
     public static RemoteCall<PublicResolver> deploy(Web3j web3j, TransactionManager transactionManager, ContractGasProvider contractGasProvider, String ensAddr) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(ensAddr)));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(ensAddr)));
         return deployRemoteCall(PublicResolver.class, web3j, transactionManager, contractGasProvider, BINARY, encodedConstructor);
     }
 
     @Deprecated
     public static RemoteCall<PublicResolver> deploy(Web3j web3j, Credentials credentials, BigInteger gasPrice, BigInteger gasLimit, String ensAddr) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(ensAddr)));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(ensAddr)));
         return deployRemoteCall(PublicResolver.class, web3j, credentials, gasPrice, gasLimit, BINARY, encodedConstructor);
     }
 
     @Deprecated
     public static RemoteCall<PublicResolver> deploy(Web3j web3j, TransactionManager transactionManager, BigInteger gasPrice, BigInteger gasLimit, String ensAddr) {
-        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.tpc.abi.datatypes.Address(ensAddr)));
+        String encodedConstructor = FunctionEncoder.encodeConstructor(Arrays.<Type>asList(new org.web3j.abi.datatypes.Address(ensAddr)));
         return deployRemoteCall(PublicResolver.class, web3j, transactionManager, gasPrice, gasLimit, BINARY, encodedConstructor);
     }
 

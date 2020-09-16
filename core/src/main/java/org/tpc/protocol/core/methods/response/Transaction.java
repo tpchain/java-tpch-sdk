@@ -14,7 +14,7 @@ package org.tpc.protocol.core.methods.response;
 
 import java.math.BigInteger;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /** Transaction object used by both {@link EthTransaction} and {@link EthBlock}. */
 public class Transaction {

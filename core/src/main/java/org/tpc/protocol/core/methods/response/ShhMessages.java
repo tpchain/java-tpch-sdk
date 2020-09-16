@@ -16,7 +16,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 import org.tpc.protocol.core.Response;
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /**
  * Whisper messages returned by:

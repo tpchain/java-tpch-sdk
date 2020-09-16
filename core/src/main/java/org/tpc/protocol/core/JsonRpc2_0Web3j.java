@@ -85,7 +85,7 @@ import org.tpc.protocol.rx.JsonRpc2_0Rx;
 import org.tpc.protocol.websocket.events.LogNotification;
 import org.tpc.protocol.websocket.events.NewHeadsNotification;
 import org.tpc.utils.Async;
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /** JSON-RPC 2.0 factory implementation. */
 public class JsonRpc2_0Web3j implements Web3j {

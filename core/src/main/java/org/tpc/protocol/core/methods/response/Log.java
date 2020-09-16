@@ -15,7 +15,7 @@ package org.tpc.protocol.core.methods.response;
 import java.math.BigInteger;
 import java.util.List;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /**
  * Log object used by {@link EthLog} and {@link EthGetTransactionReceipt}.

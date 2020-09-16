@@ -15,7 +15,7 @@ package org.tpc.protocol.core.methods.response;
 import java.math.BigInteger;
 import java.util.List;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /** TransactionReceipt object used by {@link EthGetTransactionReceipt}. */
 public class TransactionReceipt {

@@ -29,10 +29,14 @@ import org.bouncycastle.crypto.generators.PKCS5S2ParametersGenerator;
 import org.bouncycastle.crypto.generators.SCrypt;
 import org.bouncycastle.crypto.params.KeyParameter;
 
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.CipherException;
+import org.web3j.crypto.ECKeyPair;
+import org.web3j.crypto.Hash;
+import org.web3j.crypto.Keys;
+import org.web3j.utils.Numeric;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.tpc.crypto.SecureRandomUtils.secureRandom;
+import static org.web3j.crypto.SecureRandomUtils.secureRandom;
 
 /**
  * Ethereum wallet file management. For reference, refer to <a

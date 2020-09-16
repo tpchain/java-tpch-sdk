@@ -17,7 +17,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /** https://github.com/ethereum/wiki/wiki/JSON-RPC#shh_post */
 @JsonInclude(JsonInclude.Include.NON_NULL)
