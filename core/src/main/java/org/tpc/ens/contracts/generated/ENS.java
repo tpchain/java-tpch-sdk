@@ -6,15 +6,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.tpc.abi.EventEncoder;
-import org.tpc.abi.TypeReference;
-import org.tpc.abi.datatypes.Address;
-import org.tpc.abi.datatypes.Event;
-import org.tpc.abi.datatypes.Function;
-import org.tpc.abi.datatypes.Type;
-import org.tpc.abi.datatypes.generated.Bytes32;
-import org.tpc.abi.datatypes.generated.Uint64;
-import org.tpc.crypto.Credentials;
 import org.tpc.protocol.Web3j;
 import org.tpc.protocol.core.DefaultBlockParameter;
 import org.tpc.protocol.core.RemoteCall;
@@ -24,6 +15,15 @@ import org.tpc.protocol.core.methods.response.TransactionReceipt;
 import org.tpc.tx.Contract;
 import org.tpc.tx.TransactionManager;
 import org.tpc.tx.gas.ContractGasProvider;
+import org.web3j.abi.EventEncoder;
+import org.web3j.abi.TypeReference;
+import org.web3j.abi.datatypes.Address;
+import org.web3j.abi.datatypes.Event;
+import org.web3j.abi.datatypes.Function;
+import org.web3j.abi.datatypes.Type;
+import org.web3j.abi.datatypes.generated.Bytes32;
+import org.web3j.abi.datatypes.generated.Uint64;
+import org.web3j.crypto.Credentials;
 
 /**
  * <p>Auto generated code.
@@ -51,7 +51,7 @@ public class ENS extends Contract {
 
     public static final String FUNC_SETOWNER = "setOwner";
 
-    public static final Event NEWOWNER_EVENT = new Event("NewOwner", 
+    public static final Event NEWOWNER_EVENT = new Event("NewOwner",
             Arrays.<TypeReference<?>>asList(new TypeReference<Bytes32>(true) {}, new TypeReference<Bytes32>(true) {}, new TypeReference<Address>() {}));
     ;
 
@@ -86,15 +86,15 @@ public class ENS extends Contract {
     }
 
     public RemoteCall<String> resolver(byte[] node) {
-        final Function function = new Function(FUNC_RESOLVER, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+        final Function function = new Function(FUNC_RESOLVER,
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
 
     public RemoteCall<String> owner(byte[] node) {
         final Function function = new Function(FUNC_OWNER, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Address>() {}));
         return executeRemoteCallSingleValueReturn(function, String.class);
     }
@@ -102,9 +102,9 @@ public class ENS extends Contract {
     public RemoteCall<TransactionReceipt> setSubnodeOwner(byte[] node, byte[] label, String owner) {
         final Function function = new Function(
                 FUNC_SETSUBNODEOWNER, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.generated.Bytes32(label),
-                new org.tpc.abi.datatypes.Address(owner)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.generated.Bytes32(label),
+                new org.web3j.abi.datatypes.Address(owner)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
@@ -112,15 +112,15 @@ public class ENS extends Contract {
     public RemoteCall<TransactionReceipt> setTTL(byte[] node, BigInteger ttl) {
         final Function function = new Function(
                 FUNC_SETTTL, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.generated.Uint64(ttl)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.generated.Uint64(ttl)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
 
     public RemoteCall<BigInteger> ttl(byte[] node) {
         final Function function = new Function(FUNC_TTL, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node)),
                 Arrays.<TypeReference<?>>asList(new TypeReference<Uint64>() {}));
         return executeRemoteCallSingleValueReturn(function, BigInteger.class);
     }
@@ -128,8 +128,8 @@ public class ENS extends Contract {
     public RemoteCall<TransactionReceipt> setResolver(byte[] node, String resolver) {
         final Function function = new Function(
                 FUNC_SETRESOLVER, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.Address(resolver)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.Address(resolver)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }
@@ -137,8 +137,8 @@ public class ENS extends Contract {
     public RemoteCall<TransactionReceipt> setOwner(byte[] node, String owner) {
         final Function function = new Function(
                 FUNC_SETOWNER, 
-                Arrays.<Type>asList(new org.tpc.abi.datatypes.generated.Bytes32(node),
-                new org.tpc.abi.datatypes.Address(owner)),
+                Arrays.<Type>asList(new org.web3j.abi.datatypes.generated.Bytes32(node),
+                new org.web3j.abi.datatypes.Address(owner)),
                 Collections.<TypeReference<?>>emptyList());
         return executeRemoteCallTransaction(function);
     }

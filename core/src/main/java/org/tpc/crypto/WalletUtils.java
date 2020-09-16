@@ -26,11 +26,12 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.*;
+import org.web3j.utils.Numeric;
 
-import static org.tpc.crypto.Hash.sha256;
-import static org.tpc.crypto.Keys.ADDRESS_LENGTH_IN_HEX;
-import static org.tpc.crypto.Keys.PRIVATE_KEY_LENGTH_IN_HEX;
+import static org.web3j.crypto.Hash.sha256;
+import static org.web3j.crypto.Keys.ADDRESS_LENGTH_IN_HEX;
+import static org.web3j.crypto.Keys.PRIVATE_KEY_LENGTH_IN_HEX;
 
 /** Utility functions for working with Wallet files. */
 public class WalletUtils {
