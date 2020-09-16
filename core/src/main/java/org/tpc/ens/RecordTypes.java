@@ -12,7 +12,7 @@
  */
 package org.tpc.ens;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /**
  * Record type interfaces supported by resolvers as per <a
