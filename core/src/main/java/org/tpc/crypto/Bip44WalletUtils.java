@@ -19,8 +19,9 @@ import org.web3j.crypto.MnemonicUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.security.KeyPair;
 
-import static org.web3j.crypto.Bip32ECKeyPair.HARDENED_BIT;
+import static org.tpc.crypto.Bip32ECKeyPair.HARDENED_BIT;
 
 public class Bip44WalletUtils extends WalletUtils {
 
@@ -34,7 +35,7 @@ public class Bip44WalletUtils extends WalletUtils {
      * @throws IOException if the destination cannot be written to
      */
     public static Bip39Wallet generateBip44Wallet(String password, File destinationDirectory)
-            throws CipherException, IOException {
+            throws CipherException, IOException, org.tpc.crypto.CipherException {
         return generateBip44Wallet(password, destinationDirectory, false);
     }
 
@@ -50,7 +51,7 @@ public class Bip44WalletUtils extends WalletUtils {
      */
     public static Bip39Wallet generateBip44Wallet(
             String password, File destinationDirectory, boolean testNet)
-            throws CipherException, IOException {
+            throws CipherException, IOException, org.tpc.crypto.CipherException {
         byte[] initialEntropy = new byte[16];
         SecureRandomUtils.secureRandom().nextBytes(initialEntropy);
 

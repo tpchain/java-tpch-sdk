@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 import org.bouncycastle.math.ec.ECPoint;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 import static org.tpc.crypto.Hash.hmacSha512;
 import static org.tpc.crypto.Hash.sha256hash160;

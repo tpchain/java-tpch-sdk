@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 
 public class WalletTest {
-    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, NoSuchProviderException, IOException, CipherException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, InvalidAlgorithmParameterException, NoSuchProviderException, IOException, CipherException, org.tpc.crypto.CipherException {
         String walletFileName = WalletUtils.generateNewWalletFile("123456",new File("./"),false);
         System.out.println(walletFileName);
     }
