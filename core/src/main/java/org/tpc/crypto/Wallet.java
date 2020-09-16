@@ -36,6 +36,7 @@ import org.web3j.crypto.Keys;
 import org.web3j.utils.Numeric;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.web3j.crypto.Keys.PRIVATE_KEY_SIZE;
 import static org.web3j.crypto.SecureRandomUtils.secureRandom;
 
 /**
@@ -87,7 +88,7 @@ public class Wallet {
         byte[] iv = generateRandomBytes(16);
 
         byte[] privateKeyBytes =
-                Numeric.toBytesPadded(ecKeyPair.getPrivateKey(), Keys.PRIVATE_KEY_SIZE);
+                Numeric.toBytesPadded(ecKeyPair.getPrivateKey(), PRIVATE_KEY_SIZE);
 
         byte[] cipherText =
                 performCipherOperation(Cipher.ENCRYPT_MODE, iv, encryptKey, privateKeyBytes);
