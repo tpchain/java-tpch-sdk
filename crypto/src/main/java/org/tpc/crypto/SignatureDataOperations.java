@@ -15,7 +15,7 @@ package org.tpc.crypto;
 import java.math.BigInteger;
 import java.security.SignatureException;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 public interface SignatureDataOperations {
 

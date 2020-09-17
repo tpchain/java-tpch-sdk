@@ -23,7 +23,7 @@ import org.bouncycastle.crypto.signers.HMacDSAKCalculator;
 import org.bouncycastle.jcajce.provider.asymmetric.ec.BCECPrivateKey;
 import org.bouncycastle.jcajce.provider.asymmetric.ec.BCECPublicKey;
 
-import org.tpc.utils.Numeric;
+import org.web3j.utils.Numeric;
 
 /** Elliptic Curve SECP-256k1 generated key pair. */
 public class ECKeyPair {

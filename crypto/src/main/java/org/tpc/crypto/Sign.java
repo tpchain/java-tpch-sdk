@@ -25,9 +25,10 @@ import org.bouncycastle.math.ec.ECPoint;
 import org.bouncycastle.math.ec.FixedPointCombMultiplier;
 import org.bouncycastle.math.ec.custom.sec.SecP256K1Curve;
 
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.Hash;
+import org.web3j.utils.Numeric;
 
-import static org.tpc.utils.Assertions.verifyPrecondition;
+import static org.web3j.utils.Assertions.verifyPrecondition;
 
 /**
  * Transaction signing logic.

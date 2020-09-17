@@ -28,7 +28,7 @@ import org.bouncycastle.crypto.generators.PKCS5S2ParametersGenerator;
 import org.bouncycastle.crypto.params.KeyParameter;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.tpc.crypto.Hash.sha256;
+import static org.web3j.crypto.Hash.sha256;
 
 /**
  * Provides utility methods to generate random mnemonics and also generate seeds from mnemonics.

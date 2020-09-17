@@ -20,6 +20,7 @@ import org.bouncycastle.math.ec.ECPoint;
 
 import org.web3j.utils.Numeric;
 
+import static okio.HashingSink.hmacSha512;
 import static org.tpc.crypto.Hash.hmacSha512;
 import static org.tpc.crypto.Hash.sha256hash160;
 

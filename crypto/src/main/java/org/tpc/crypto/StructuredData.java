@@ -18,8 +18,8 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import org.tpc.abi.datatypes.Address;
-import org.tpc.abi.datatypes.generated.Uint256;
+import org.web3j.abi.datatypes.Address;
+import org.web3j.abi.datatypes.generated.Uint256;
 
 public class StructuredData {
     static class Entry {

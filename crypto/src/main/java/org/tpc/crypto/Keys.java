@@ -25,8 +25,9 @@ import java.util.Arrays;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 
-import org.tpc.utils.Numeric;
-import org.tpc.utils.Strings;
+import org.web3j.crypto.Hash;
+import org.web3j.utils.Numeric;
+import org.web3j.utils.Strings;
 
 import static org.tpc.crypto.SecureRandomUtils.secureRandom;
 

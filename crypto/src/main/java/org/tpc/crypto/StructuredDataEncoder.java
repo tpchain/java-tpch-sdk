@@ -30,13 +30,14 @@ import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.tpc.abi.TypeEncoder;
-import org.tpc.abi.datatypes.AbiTypes;
-import org.tpc.abi.datatypes.Type;
-import org.tpc.utils.Numeric;
+import kotlin.Pair;
+import org.web3j.abi.TypeEncoder;
+import org.web3j.abi.datatypes.Type;
+import org.web3j.abi.datatypes.generated.AbiTypes;
+import org.web3j.utils.Numeric;
 
-import static org.tpc.crypto.Hash.sha3;
-import static org.tpc.crypto.Hash.sha3String;
+import static org.web3j.crypto.Hash.sha3;
+import static org.web3j.crypto.Hash.sha3String;
 
 public class StructuredDataEncoder {
     public final StructuredData.EIP712Message jsonMessageObject;

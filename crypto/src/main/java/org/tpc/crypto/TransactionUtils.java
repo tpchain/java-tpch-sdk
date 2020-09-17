@@ -12,7 +12,8 @@
  */
 package org.tpc.crypto;
 
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.Hash;
+import org.web3j.utils.Numeric;
 
 /** Transaction utility functions. */
 public class TransactionUtils {

@@ -17,11 +17,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.tpc.rlp.RlpEncoder;
-import org.tpc.rlp.RlpList;
-import org.tpc.rlp.RlpString;
-import org.tpc.rlp.RlpType;
-import org.tpc.utils.Numeric;
+import org.web3j.crypto.Hash;
+import org.web3j.rlp.RlpEncoder;
+import org.web3j.rlp.RlpList;
+import org.web3j.rlp.RlpString;
+import org.web3j.rlp.RlpType;
+import org.web3j.utils.Numeric;
 
 /** Smart Contract utility functions. */
 public class ContractUtils {
