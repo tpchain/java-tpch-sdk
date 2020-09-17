@@ -20,9 +20,7 @@ import org.bouncycastle.math.ec.ECPoint;
 
 import org.web3j.utils.Numeric;
 
-import static okio.HashingSink.hmacSha512;
-import static org.tpc.crypto.Hash.hmacSha512;
-import static org.tpc.crypto.Hash.sha256hash160;
+import static org.web3j.crypto.Hash.sha256;
 
 /**
  * BIP-32 key pair.
@@ -151,7 +149,7 @@ public class Bip32ECKeyPair extends ECKeyPair {
     }
 
     private byte[] getIdentifier() {
-        return sha256hash160(getPublicKeyPoint().getEncoded(true));
+        return sha256(getPublicKeyPoint().getEncoded(true));
     }
 
     public ECPoint getPublicKeyPoint() {
