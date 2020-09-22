@@ -14,7 +14,7 @@ package org.tpc.utils;
 
 import java.math.BigDecimal;
 
-/** Ethereum unit conversion functions. */
+/** Tpchain unit conversion functions. */
 public final class Convert {
     private Convert() {}
 

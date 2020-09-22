@@ -186,13 +186,13 @@ public class WalletUtilsTest {
                 WalletUtils.getDefaultKeyDirectory("Mac OS X")
                         .endsWith(
                                 String.format(
-                                        "%sLibrary%sEthereum", File.separator, File.separator)));
+                                        "%sLibrary%sTpchain", File.separator, File.separator)));
         assertTrue(
                 WalletUtils.getDefaultKeyDirectory("Windows")
-                        .endsWith(String.format("%sEthereum", File.separator)));
+                        .endsWith(String.format("%sTpchain", File.separator)));
         assertTrue(
                 WalletUtils.getDefaultKeyDirectory("Linux")
-                        .endsWith(String.format("%s.ethereum", File.separator)));
+                        .endsWith(String.format("%s.tpchain", File.separator)));
     }
 
     @Test

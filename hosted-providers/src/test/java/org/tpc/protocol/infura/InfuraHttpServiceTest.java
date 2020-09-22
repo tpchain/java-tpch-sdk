@@ -29,11 +29,11 @@ public class InfuraHttpServiceTest {
 
         assertEquals(
                 buildClientVersionHeader("geth 1.4.19", true),
-                (Collections.singletonMap("Infura-Ethereum-Preferred-Client", "geth 1.4.19")));
+                (Collections.singletonMap("Infura-Tpchain-Preferred-Client", "geth 1.4.19")));
 
         assertEquals(
                 buildClientVersionHeader("geth 1.4.19", false),
                 (Collections.singletonMap(
-                        "Infura-Ethereum-Preferred-Client", "geth 1.4.19; required=false")));
+                        "Infura-Tpchain-Preferred-Client", "geth 1.4.19; required=false")));
     }
 }

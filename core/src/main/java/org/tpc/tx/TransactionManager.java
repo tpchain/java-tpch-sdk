@@ -29,7 +29,7 @@ import org.tpc.tx.response.TransactionReceiptProcessor;
 import static org.tpc.protocol.core.JsonRpc2_0Web3j.DEFAULT_BLOCK_TIME;
 
 /**
- * Transaction manager abstraction for executing transactions with Ethereum client via various
+ * Transaction manager abstraction for executing transactions with Tpchain client via various
  * mechanisms.
  */
 public abstract class TransactionManager {

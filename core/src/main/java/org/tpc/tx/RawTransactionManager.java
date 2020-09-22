@@ -33,7 +33,7 @@ import org.web3j.crypto.TransactionEncoder;
 import org.web3j.utils.Numeric;
 
 /**
- * TransactionManager implementation using Ethereum wallet file to create and sign transactions
+ * TransactionManager implementation using Tpchain wallet file to create and sign transactions
  * locally.
  *
  * <p>This transaction manager provides support for specifying the chain id for transactions as per

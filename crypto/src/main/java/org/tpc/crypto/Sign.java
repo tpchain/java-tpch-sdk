@@ -48,7 +48,7 @@ public class Sign {
                     CURVE_PARAMS.getH());
     static final BigInteger HALF_CURVE_ORDER = CURVE_PARAMS.getN().shiftRight(1);
 
-    static final String MESSAGE_PREFIX = "\u0019Ethereum Signed Message:\n";
+    static final String MESSAGE_PREFIX = "\u0019Tpchain Signed Message:\n";
 
     static byte[] getEthereumMessagePrefix(int messageLength) {
         return MESSAGE_PREFIX.concat(String.valueOf(messageLength)).getBytes();
@@ -194,7 +194,7 @@ public class Sign {
     }
 
     /**
-     * Given an arbitrary piece of text and an Ethereum message signature encoded in bytes, returns
+     * Given an arbitrary piece of text and an Tpchain message signature encoded in bytes, returns
      * the public key that was used to sign it. This can then be compared to the expected public key
      * to determine if the signature was correct.
      *
@@ -210,7 +210,7 @@ public class Sign {
     }
 
     /**
-     * Given an arbitrary message and an Ethereum message signature encoded in bytes, returns the
+     * Given an arbitrary message and an Tpchain message signature encoded in bytes, returns the
      * public key that was used to sign it. This can then be compared to the expected public key to
      * determine if the signature was correct.
      *
@@ -226,7 +226,7 @@ public class Sign {
     }
 
     /**
-     * Given an arbitrary message hash and an Ethereum message signature encoded in bytes, returns
+     * Given an arbitrary message hash and an Tpchain message signature encoded in bytes, returns
      * the public key that was used to sign it. This can then be compared to the expected public key
      * to determine if the signature was correct.
      *

@@ -84,7 +84,7 @@ public class CoreIT {
     public void testWeb3ClientVersion() throws Exception {
         Web3ClientVersion web3ClientVersion = web3j.web3ClientVersion().send();
         String clientVersion = web3ClientVersion.getWeb3ClientVersion();
-        System.out.println("Ethereum client version: " + clientVersion);
+        System.out.println("Tpchain client version: " + clientVersion);
         assertFalse(clientVersion.isEmpty());
     }
 

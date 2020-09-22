@@ -24,7 +24,7 @@ import org.tpc.protocol.core.methods.response.EthSendTransaction;
 import org.tpc.tx.response.TransactionReceiptProcessor;
 
 /**
- * TransactionManager implementation for using an Ethereum node to transact.
+ * TransactionManager implementation for using an Tpchain node to transact.
  *
  * <p><b>Note</b>: accounts must be unlocked on the node for transactions to be successful.
  */

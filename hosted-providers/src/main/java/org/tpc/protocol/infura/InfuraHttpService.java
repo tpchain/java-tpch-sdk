@@ -21,7 +21,7 @@ import org.tpc.protocol.http.HttpService;
 public class InfuraHttpService extends HttpService {
 
     private static final String INFURA_ETHEREUM_PREFERRED_CLIENT =
-            "Infura-Ethereum-Preferred-Client";
+            "Infura-Tpchain-Preferred-Client";
 
     private final Map<String, String> clientVersionHeader;
 

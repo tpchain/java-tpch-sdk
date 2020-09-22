@@ -77,7 +77,7 @@ public abstract class ManagedTransaction {
     }
 
     /**
-     * Return the current gas price from the ethereum node.
+     * Return the current gas price from the tpchain node.
      *
      * <p>Note: this method was previously called {@code getGasPrice} but was renamed to distinguish
      * it when a bean accessor method on {@link Contract} was added with that name. If you have a
@@ -87,7 +87,7 @@ public abstract class ManagedTransaction {
      * behavior.
      *
      * @return the current gas price, determined dynamically at invocation
-     * @throws IOException if there's a problem communicating with the ethereum node
+     * @throws IOException if there's a problem communicating with the tpchain node
      */
     public BigInteger requestCurrentGasPrice() throws IOException {
         EthGasPrice ethGasPrice = web3j.ethGasPrice().send();
