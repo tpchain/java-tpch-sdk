@@ -92,7 +92,7 @@ public class EnsResolver {
             try {
                 contractAddress = resolver.addr(nameHash).send();
             } catch (Exception e) {
-                throw new RuntimeException("Unable to execute Ethereum request", e);
+                throw new RuntimeException("Unable to execute Tpchain request", e);
             }
 
             if (!WalletUtils.isValidAddress(contractAddress)) {
@@ -109,7 +109,7 @@ public class EnsResolver {
      * Reverse name resolution as documented in the <a
      * href="https://docs.ens.domains/contract-api-reference/reverseregistrar">specification</a>.
      *
-     * @param address an ethereum address, example: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
+     * @param address a tpchain address, example: "0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e"
      * @return a EnsName registered for provided address
      */
     public String reverseResolve(String address) {
@@ -122,7 +122,7 @@ public class EnsResolver {
             try {
                 name = resolver.name(nameHash).send();
             } catch (Exception e) {
-                throw new RuntimeException("Unable to execute Ethereum request", e);
+                throw new RuntimeException("Unable to execute Tpchain request", e);
             }
 
             if (!isValidEnsName(name, addressLength)) {
