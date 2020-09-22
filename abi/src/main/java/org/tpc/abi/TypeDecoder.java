@@ -53,7 +53,7 @@ import org.tpc.utils.Numeric;
 import static org.tpc.abi.TypeReference.makeTypeReference;
 
 /**
- * Ethereum Contract Application Binary Interface (ABI) decoding for types. Decoding is not
+ * Tpchain Contract Application Binary Interface (ABI) decoding for types. Decoding is not
  * documented, but is the reverse of the encoding details located <a
  * href="https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI">here</a>.
  */

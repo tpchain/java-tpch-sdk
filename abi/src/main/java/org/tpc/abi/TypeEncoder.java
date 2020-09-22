@@ -38,7 +38,7 @@ import static org.tpc.abi.datatypes.Type.MAX_BIT_LENGTH;
 import static org.tpc.abi.datatypes.Type.MAX_BYTE_LENGTH;
 
 /**
- * Ethereum Contract Application Binary Interface (ABI) encoding for types. Further details are
+ * Tpchain Contract Application Binary Interface (ABI) encoding for types. Further details are
  * available <a href="https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI">here</a>.
  */
 public class TypeEncoder {
