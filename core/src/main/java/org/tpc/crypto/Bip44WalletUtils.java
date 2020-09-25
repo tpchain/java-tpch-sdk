@@ -35,7 +35,7 @@ public class Bip44WalletUtils extends WalletUtils {
      * @throws IOException if the destination cannot be written to
      */
     public static Bip39Wallet generateBip44Wallet(String password, File destinationDirectory)
-            throws CipherException, IOException, org.tpc.crypto.CipherException {
+            throws CipherException, IOException, org.web3j.crypto.CipherException {
         return generateBip44Wallet(password, destinationDirectory, false);
     }
 
@@ -51,7 +51,7 @@ public class Bip44WalletUtils extends WalletUtils {
      */
     public static Bip39Wallet generateBip44Wallet(
             String password, File destinationDirectory, boolean testNet)
-            throws CipherException, IOException, org.tpc.crypto.CipherException {
+            throws CipherException, IOException, org.web3j.crypto.CipherException {
         byte[] initialEntropy = new byte[16];
         SecureRandomUtils.secureRandom().nextBytes(initialEntropy);
 
@@ -61,7 +61,12 @@ public class Bip44WalletUtils extends WalletUtils {
         Bip32ECKeyPair masterKeypair = Bip32ECKeyPair.generateKeyPair(seed);
         Bip32ECKeyPair bip44Keypair = generateBip44KeyPair(masterKeypair, testNet);
 
-        String walletFile = generateWalletFile(password, bip44Keypair, destinationDirectory, false);
+        String walletFile = null;
+        try {
+            walletFile = generateWalletFile(password, bip44Keypair, destinationDirectory, false);
+        } catch (org.tpc.crypto.CipherException e) {
+            e.printStackTrace();
+        }
 
         return new Bip39Wallet(walletFile, mnemonic);
     }
@@ -82,15 +87,15 @@ public class Bip44WalletUtils extends WalletUtils {
         }
     }
 
-    public static Credentials loadBip44Credentials(String password, String mnemonic) {
+    public static org.tpc.crypto.Credentials loadBip44Credentials(String password, String mnemonic) {
         return loadBip44Credentials(password, mnemonic, false);
     }
 
-    public static Credentials loadBip44Credentials(
+    public static org.tpc.crypto.Credentials loadBip44Credentials(
             String password, String mnemonic, boolean testNet) {
         byte[] seed = MnemonicUtils.generateSeed(mnemonic, password);
         Bip32ECKeyPair masterKeypair = Bip32ECKeyPair.generateKeyPair(seed);
         Bip32ECKeyPair bip44Keypair = generateBip44KeyPair(masterKeypair, testNet);
-        return Credentials.create(bip44Keypair);
+        return org.tpc.crypto.Credentials.create(bip44Keypair);
     }
 }
