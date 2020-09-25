@@ -69,19 +69,27 @@ public class WalletUtils {
             throws CipherException, IOException, InvalidAlgorithmParameterException,
                     NoSuchAlgorithmException, NoSuchProviderException {
 
-        ECKeyPair ecKeyPair = Keys.createEcKeyPair();
+        org.web3j.crypto.ECKeyPair ecKeyPair = org.web3j.crypto.Keys.createEcKeyPair();
         return generateWalletFile(password, ecKeyPair, destinationDirectory, useFullScrypt);
     }
 
     public static String generateWalletFile(
-            String password, ECKeyPair ecKeyPair, File destinationDirectory, boolean useFullScrypt)
+            String password, org.web3j.crypto.ECKeyPair ecKeyPair, File destinationDirectory, boolean useFullScrypt)
             throws CipherException, IOException {
 
-        WalletFile walletFile;
+        WalletFile walletFile = null;
         if (useFullScrypt) {
-            walletFile = Wallet.createStandard(password, ecKeyPair);
+            try {
+                walletFile = Wallet.createStandard(password, ecKeyPair);
+            } catch (org.web3j.crypto.CipherException e) {
+                e.printStackTrace();
+            }
         } else {
-            walletFile = Wallet.createLight(password, ecKeyPair);
+            try {
+                walletFile = Wallet.createLight(password, ecKeyPair);
+            } catch (org.web3j.crypto.CipherException e) {
+                e.printStackTrace();
+            }
         }
 
         String fileName = getWalletFileName(walletFile);
@@ -113,7 +121,7 @@ public class WalletUtils {
 
         String mnemonic = MnemonicUtils.generateMnemonic(initialEntropy);
         byte[] seed = MnemonicUtils.generateSeed(mnemonic, password);
-        ECKeyPair privateKey = ECKeyPair.create(sha256(seed));
+        org.web3j.crypto.ECKeyPair privateKey = org.web3j.crypto.ECKeyPair.create(sha256(seed));
 
         String walletFile = generateWalletFile(password, privateKey, destinationDirectory, false);
 
@@ -134,22 +142,27 @@ public class WalletUtils {
             String password, String mnemonic, File destinationDirectory)
             throws CipherException, IOException {
         byte[] seed = MnemonicUtils.generateSeed(mnemonic, password);
-        ECKeyPair privateKey = ECKeyPair.create(sha256(seed));
+        org.web3j.crypto.ECKeyPair privateKey = org.web3j.crypto.ECKeyPair.create(sha256(seed));
 
         String walletFile = generateWalletFile(password, privateKey, destinationDirectory, false);
 
         return new Bip39Wallet(walletFile, mnemonic);
     }
 
-    public static Credentials loadCredentials(String password, String source)
+    public static org.web3j.crypto.Credentials loadCredentials(String password, String source)
             throws IOException, CipherException {
         return loadCredentials(password, new File(source));
     }
 
-    public static Credentials loadCredentials(String password, File source)
+    public static org.web3j.crypto.Credentials loadCredentials(String password, File source)
             throws IOException, CipherException {
         WalletFile walletFile = objectMapper.readValue(source, WalletFile.class);
-        return Credentials.create(Wallet.decrypt(password, walletFile));
+        try {
+            return org.web3j.crypto.Credentials.create(Wallet.decrypt(password, walletFile));
+        } catch (org.web3j.crypto.CipherException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static Credentials loadBip39Credentials(String password, String mnemonic) {
@@ -167,10 +180,15 @@ public class WalletUtils {
      * @throws IOException if a low-level I/O problem (unexpected end-of-input, network error)
      *     occurs
      */
-    public static Credentials loadJsonCredentials(String password, String content)
+    public static org.web3j.crypto.Credentials loadJsonCredentials(String password, String content)
             throws IOException, CipherException {
         WalletFile walletFile = objectMapper.readValue(content, WalletFile.class);
-        return Credentials.create(Wallet.decrypt(password, walletFile));
+        try {
+            return org.web3j.crypto.Credentials.create(Wallet.decrypt(password, walletFile));
+        } catch (org.web3j.crypto.CipherException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private static String getWalletFileName(WalletFile walletFile) {
