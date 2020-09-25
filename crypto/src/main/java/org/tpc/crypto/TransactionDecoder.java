@@ -25,11 +25,11 @@ public class TransactionDecoder {
         final byte[] transaction = Numeric.hexStringToByteArray(hexTransaction);
         final RlpList rlpList = RlpDecoder.decode(transaction);
         final RlpList values = (RlpList) rlpList.getValues().get(0);
-        final BigInteger nonce = ((RlpString) values.getValues().get(0)).asPositiveBigInteger();
-        final BigInteger gasPrice = ((RlpString) values.getValues().get(1)).asPositiveBigInteger();
-        final BigInteger gasLimit = ((RlpString) values.getValues().get(2)).asPositiveBigInteger();
+        final BigInteger nonce = ((RlpString) values.getValues().get(0)).asBigInteger();
+        final BigInteger gasPrice = ((RlpString) values.getValues().get(1)).asBigInteger();
+        final BigInteger gasLimit = ((RlpString) values.getValues().get(2)).asBigInteger();
         final String to = ((RlpString) values.getValues().get(3)).asString();
-        final BigInteger value = ((RlpString) values.getValues().get(4)).asPositiveBigInteger();
+        final BigInteger value = ((RlpString) values.getValues().get(4)).asBigInteger();
         final String data = ((RlpString) values.getValues().get(5)).asString();
         if (values.getValues().size() == 6
                 || (values.getValues().size() == 8

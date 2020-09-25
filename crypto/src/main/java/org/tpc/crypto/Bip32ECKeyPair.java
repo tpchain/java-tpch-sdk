@@ -16,10 +16,12 @@ import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
+import okio.ByteString;
 import org.bouncycastle.math.ec.ECPoint;
 
 import org.web3j.utils.Numeric;
 
+import static okio.HashingSink.hmacSha512;
 import static org.web3j.crypto.Hash.sha256;
 
 /**
@@ -63,7 +65,7 @@ public class Bip32ECKeyPair extends ECKeyPair {
     }
 
     public static Bip32ECKeyPair generateKeyPair(byte[] seed) {
-        byte[] i = hmacSha512("Bitcoin seed".getBytes(), seed);
+        byte[] i = hmacSha512(null, ByteString.of(seed)).toString().getBytes();
         byte[] il = Arrays.copyOfRange(i, 0, 32);
         byte[] ir = Arrays.copyOfRange(i, 32, 64);
         Arrays.fill(i, (byte) 0);
@@ -91,7 +93,7 @@ public class Bip32ECKeyPair extends ECKeyPair {
             ByteBuffer data = ByteBuffer.allocate(37);
             data.put(parentPublicKey);
             data.putInt(childNumber);
-            byte[] i = hmacSha512(getChainCode(), data.array());
+            byte[] i = hmacSha512(null, ByteString.of(data.array())).toString().getBytes();
             byte[] il = Arrays.copyOfRange(i, 0, 32);
             byte[] chainCode = Arrays.copyOfRange(i, 32, 64);
             Arrays.fill(i, (byte) 0);
@@ -110,7 +112,7 @@ public class Bip32ECKeyPair extends ECKeyPair {
                 data.put(parentPublicKey);
             }
             data.putInt(childNumber);
-            byte[] i = hmacSha512(getChainCode(), data.array());
+            byte[] i = hmacSha512(null, ByteString.of(data.array())).toString().getBytes();
             byte[] il = Arrays.copyOfRange(i, 0, 32);
             byte[] chainCode = Arrays.copyOfRange(i, 32, 64);
             Arrays.fill(i, (byte) 0);

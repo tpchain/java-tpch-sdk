@@ -63,7 +63,7 @@ public class Bip44WalletUtils extends WalletUtils {
 
         String walletFile = null;
         try {
-            walletFile = generateWalletFile(password, bip44Keypair, destinationDirectory, false);
+            walletFile = generateWalletFile(password, org.web3j.crypto.ECKeyPair.create(seed), destinationDirectory, false);
         } catch (org.tpc.crypto.CipherException e) {
             e.printStackTrace();
         }
