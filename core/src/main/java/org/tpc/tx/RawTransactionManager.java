@@ -45,11 +45,11 @@ public class RawTransactionManager extends TransactionManager {
     private final Web3j web3j;
     final Credentials credentials;
 
-    private final long chainId;
+    private final byte chainId;
 
     protected TxHashVerifier txHashVerifier = new TxHashVerifier();
 
-    public RawTransactionManager(Web3j web3j, Credentials credentials, long chainId) {
+    public RawTransactionManager(Web3j web3j, Credentials credentials, byte chainId) {
         super(web3j, credentials.getAddress());
 
         this.web3j = web3j;
@@ -61,7 +61,7 @@ public class RawTransactionManager extends TransactionManager {
     public RawTransactionManager(
             Web3j web3j,
             Credentials credentials,
-            long chainId,
+            byte chainId,
             TransactionReceiptProcessor transactionReceiptProcessor) {
         super(transactionReceiptProcessor, credentials.getAddress());
 
@@ -72,7 +72,7 @@ public class RawTransactionManager extends TransactionManager {
     }
 
     public RawTransactionManager(
-            Web3j web3j, Credentials credentials, long chainId, int attempts, long sleepDuration) {
+            Web3j web3j, Credentials credentials, byte chainId, int attempts, long sleepDuration) {
         super(web3j, attempts, sleepDuration, credentials.getAddress());
 
         this.web3j = web3j;
@@ -140,7 +140,7 @@ public class RawTransactionManager extends TransactionManager {
 
         RawTransaction rawTransaction =
                 RawTransaction.createTransaction(
-                        nonce, null, gasLimit, to, value, data, gasPremium, feeCap);
+                        nonce, null, gasLimit, to, value, data);
 
         return signAndSend(rawTransaction);
     }
