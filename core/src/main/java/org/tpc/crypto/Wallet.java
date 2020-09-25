@@ -36,7 +36,7 @@ import org.web3j.crypto.Keys;
 import org.web3j.utils.Numeric;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.web3j.crypto.Keys.PRIVATE_KEY_SIZE;
+import static org.tpc.crypto.Keys.PRIVATE_KEY_SIZE;
 
 /**
  * Ethereum wallet file management. For reference, refer to <a
