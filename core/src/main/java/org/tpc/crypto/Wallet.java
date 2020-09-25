@@ -33,10 +33,10 @@ import org.web3j.crypto.CipherException;
 import org.web3j.crypto.ECKeyPair;
 import org.web3j.crypto.Hash;
 import org.web3j.crypto.Keys;
-import org.web3j.crypto.WalletUtils;
 import org.web3j.utils.Numeric;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.web3j.crypto.Keys.PRIVATE_KEY_SIZE;
 
 /**
  * Ethereum wallet file management. For reference, refer to <a
@@ -87,7 +87,7 @@ public class Wallet {
         byte[] iv = generateRandomBytes(16);
 
         byte[] privateKeyBytes =
-                Numeric.toBytesPadded(ecKeyPair.getPrivateKey(), org.tpc.crypto.Keys.PRIVATE_KEY_SIZE);
+                Numeric.toBytesPadded(ecKeyPair.getPrivateKey(), PRIVATE_KEY_SIZE);
 
         byte[] cipherText =
                 performCipherOperation(Cipher.ENCRYPT_MODE, iv, encryptKey, privateKeyBytes);
